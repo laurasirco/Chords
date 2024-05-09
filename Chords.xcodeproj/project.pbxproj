@@ -176,6 +176,9 @@
 		D341891D2BC974A600ED4131 /* GuiApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D341891B2BC974A600ED4131 /* GuiApp.cpp */; };
 		D34189202BC9781200ED4131 /* ChordsEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D341891E2BC9781200ED4131 /* ChordsEngine.cpp */; };
 		D34189232BC9781E00ED4131 /* SoundEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34189212BC9781E00ED4131 /* SoundEngine.cpp */; };
+		D34189262BE3ABB700ED4131 /* KeyboardReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34189242BE3ABB700ED4131 /* KeyboardReader.cpp */; };
+		D34189292BE7A89400ED4131 /* Sequence.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34189272BE7A89400ED4131 /* Sequence.cpp */; };
+		D341892C2BE7CD8F00ED4131 /* SequenceEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D341892A2BE7CD8F00ED4131 /* SequenceEvent.cpp */; };
 		D5AEE642FF9A47D6C359B84E /* OscParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FED1409DB8900518780BFAF6 /* OscParser.cpp */; };
 		D5BBE6B38445B8231F47E133 /* Panner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AEA1D75CCCDA872FDF288DE /* Panner.cpp */; };
 		D70EEB0FDDA2C6ED1251F311 /* MidiKeysBuffers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6053860F3448FEFEA173B20F /* MidiKeysBuffers.cpp */; };
@@ -715,6 +718,12 @@
 		D341891F2BC9781200ED4131 /* ChordsEngine.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ChordsEngine.hpp; sourceTree = "<group>"; };
 		D34189212BC9781E00ED4131 /* SoundEngine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SoundEngine.cpp; sourceTree = "<group>"; };
 		D34189222BC9781E00ED4131 /* SoundEngine.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SoundEngine.hpp; sourceTree = "<group>"; };
+		D34189242BE3ABB700ED4131 /* KeyboardReader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = KeyboardReader.cpp; sourceTree = "<group>"; };
+		D34189252BE3ABB700ED4131 /* KeyboardReader.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = KeyboardReader.hpp; sourceTree = "<group>"; };
+		D34189272BE7A89400ED4131 /* Sequence.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Sequence.cpp; sourceTree = "<group>"; };
+		D34189282BE7A89400ED4131 /* Sequence.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Sequence.hpp; sourceTree = "<group>"; };
+		D341892A2BE7CD8F00ED4131 /* SequenceEvent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SequenceEvent.cpp; sourceTree = "<group>"; };
+		D341892B2BE7CD8F00ED4131 /* SequenceEvent.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SequenceEvent.hpp; sourceTree = "<group>"; };
 		D38ABA0A14979D7E22C5A5FE /* Clockable.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Clockable.h; path = ../../../addons/ofxPDSP/src/messages/Clockable.h; sourceTree = SOURCE_ROOT; };
 		D3B221C0934A3F7EC9530473 /* FDLConvolver.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = FDLConvolver.h; path = ../../../addons/ofxPDSP/src/DSP/convolution/FDLConvolver.h; sourceTree = SOURCE_ROOT; };
 		D40509515EE1704AEC6A16D1 /* OnePole.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = OnePole.cpp; path = ../../../addons/ofxPDSP/src/DSP/filters/OnePole.cpp; sourceTree = SOURCE_ROOT; };
@@ -2398,6 +2407,12 @@
 				D341891F2BC9781200ED4131 /* ChordsEngine.hpp */,
 				D34189212BC9781E00ED4131 /* SoundEngine.cpp */,
 				D34189222BC9781E00ED4131 /* SoundEngine.hpp */,
+				D34189242BE3ABB700ED4131 /* KeyboardReader.cpp */,
+				D34189252BE3ABB700ED4131 /* KeyboardReader.hpp */,
+				D34189272BE7A89400ED4131 /* Sequence.cpp */,
+				D34189282BE7A89400ED4131 /* Sequence.hpp */,
+				D341892A2BE7CD8F00ED4131 /* SequenceEvent.cpp */,
+				D341892B2BE7CD8F00ED4131 /* SequenceEvent.hpp */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -2679,6 +2694,7 @@
 				55169838B1C1CE8A3035E2D8 /* ofxAudioFile.cpp in Sources */,
 				856AA354D08AB4B323081444 /* ofxBaseGui.cpp in Sources */,
 				5CBB2AB3A60F65431D7B555D /* ofxButton.cpp in Sources */,
+				D341892C2BE7CD8F00ED4131 /* SequenceEvent.cpp in Sources */,
 				853E0BA2F448076739446874 /* ofxColorPicker.cpp in Sources */,
 				B266578FC55D23BFEBC042E7 /* ofxGuiGroup.cpp in Sources */,
 				852E0891794923EE7583C621 /* ofxInputField.cpp in Sources */,
@@ -2743,6 +2759,7 @@
 				DF440883BDCC5F925E94575B /* ADSR.cpp in Sources */,
 				D341891A2BBF1DCC00ED4131 /* PolySynth.cpp in Sources */,
 				63A7C4F76051FB7FC0E9FF96 /* AHR.cpp in Sources */,
+				D34189292BE7A89400ED4131 /* Sequence.cpp in Sources */,
 				BA06A08DCEC93A670A8A5401 /* EnvelopeStage.cpp in Sources */,
 				C47AE9C64637E21C8B6EAEB6 /* APF1.cpp in Sources */,
 				901C52413B918554601C4CFD /* APF4.cpp in Sources */,
@@ -2841,6 +2858,7 @@
 				17F813B8CBF2D916787C5DC6 /* TableOscillator.cpp in Sources */,
 				2F87412E72C3145BEE073BD1 /* VAOscillator.cpp in Sources */,
 				A982ADA9C3A8432A4B3C21C9 /* BasiVerb.cpp in Sources */,
+				D34189262BE3ABB700ED4131 /* KeyboardReader.cpp in Sources */,
 				6169A0922A8C7E6E0AB71197 /* IRVerb.cpp in Sources */,
 				7FA4C904676B229545682F3A /* GrainCloud.cpp in Sources */,
 				7C27448C4E7C343342F98444 /* TriggeredGrain.cpp in Sources */,

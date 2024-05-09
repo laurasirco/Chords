@@ -7,13 +7,22 @@
 
 #include "ChordsEngine.hpp"
 
-void ChordsEngine::setup(){
+void ChordsEngine::setup(int voices){
     
     setupModes(Note::create("C"));
     setupChords(modes[0]);
     
     currentMode = 0;
     currentChord = chords[0];
+    numVoices = voices;
+    activeVoices.push_back(0);
+    activeVoices.push_back(1);
+    activeVoices.push_back(2);
+    activeVoices.push_back(3);
+    activeVoices.push_back(4);
+    activeVoices.push_back(5);
+    activeVoices.push_back(6);
+
 }
 
 void ChordsEngine::setupChords(ScalePtr scale){
@@ -101,14 +110,31 @@ std::vector<int> ChordsEngine::noteIndexesChordFromNoteNumber(int note){
 }
 
 string ChordsEngine::currentChordName(){
-    vector<string> analyse = Chord::analyse(currentChord, true, false, false);
+    
+    vector<string> analyse = Chord::analyse(trimChordToVoices(currentChord, 3), true, false, false);
     if(analyse.size() > 0)
         return analyse[0];
     
     return "";
 }
 
+void ChordsEngine::increaseMode(int step){
+    if(step == 1)
+        increaseMode();
+    else if(step == -1)
+        decreaseMode();
+}
+
 void ChordsEngine::increaseMode(){
+    currentMode++;
+    if(currentMode > 6)
+        currentMode = 6;
+    
+    setupChords(modes[currentMode]);
+    
+}
+
+void ChordsEngine::decreaseMode(){
     currentMode--;
     if(currentMode < 0)
         currentMode = 0;
@@ -116,20 +142,35 @@ void ChordsEngine::increaseMode(){
     setupChords(modes[currentMode]);
 }
 
-void ChordsEngine::decreaseMode(){
-    currentMode++;
-    if(currentMode > 6)
-        currentMode = 6;
+void ChordsEngine::setCurrentChord(int index, int voices){
+    currentChord = trimChordToVoices(chords[index], voices);
     
-    setupChords(modes[currentMode]);
+    numVoices = voices;
 }
 
-void ChordsEngine::setCurrentChord(int index, int voices){
-    currentChord = chords[index];
-    
+deque<NotePtr> ChordsEngine::trimChordToVoices(deque<NotePtr> chord, int voices){
     deque<NotePtr> trimmedChord;
     
     for(int i = 0; i < voices; i++){
-        trimmedChord.push_back(currentChord[i]);
+        trimmedChord.push_back(chord[i]);
     }
+    
+    return trimmedChord;
 }
+
+void ChordsEngine::setActiveVoices(std::vector<int> voices){
+    for(int i = 0; i < voices.size(); i++){
+        std::vector<int>::iterator it = std::find(activeVoices.begin(), activeVoices.end(), voices[i]);
+        if(it != activeVoices.end()){
+            activeVoices.erase(it);
+        }
+        else{
+            activeVoices.push_back(voices[i]);
+        }
+    }
+    
+    std::vector<int> activeVoicesCopy = activeVoices;
+    std::sort(activeVoicesCopy.begin(), activeVoicesCopy.end());
+    activeVoices = activeVoicesCopy;
+}
+

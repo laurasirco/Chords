@@ -40,6 +40,17 @@ void PolySynth::triggerOffAllVoices(){
     }
 }
 
+void PolySynth::triggerOnSelectedVoices(std::vector<int> selectedVoices){
+    
+    for(int i = 0; i < selectedVoices.size(); i++){
+        voices[selectedVoices[i]].triggerOn();
+    }
+    
+}
+
+void PolySynth::setPitchForVoice(int pitch, int voice){
+    pitch >> voices[voice].in("pitch");
+}
 
 void PolySynth::Voice::setup( PolySynth & ui, int v ){
     
@@ -48,7 +59,7 @@ void PolySynth::Voice::setup( PolySynth & ui, int v ){
 
     osc.out_sine() * 1.0f  >> amp;
     trigger.out_trig() >> env;
-    env.set(40.0f, 10.0f, 1.0f, 800.0f) >> amp.in_mod();
+    env.set(4000.0f, 50.0f, 1.0f, 8000.0f) >> amp.in_mod();
     200.0f >> filter.in_cutoff();
     0.3f  >> filter.in_reso();
     

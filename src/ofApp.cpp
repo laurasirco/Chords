@@ -5,10 +5,10 @@ using namespace MusicTheory;
 //--------------------------------------------------------------
 void ofApp::setup(){
     
+    numVoices = 7;
+    currentChordNumber = -1;
     
-    numVoices = 2;
-    
-    chordsEngine.setup();
+    chordsEngine.setup(numVoices);
     soundEngine.setup(numVoices);
         
     for(int i = 0; i < numVoices; i++){
@@ -25,6 +25,11 @@ void ofApp::setup(){
     ofSetLineWidth(1.0f);
     ofSetFrameRate(24);
     
+    //Fonts
+    ofTrueTypeFont::setGlobalDpi(72);
+    titleFont.load("SourceCodePro-ExtraLight.ttf", 40, true, true);
+    bodyFont.load("SourceCodePro-ExtraLight.ttf", 24, true, true);
+    
     // GUI -----------------------------------
     gui.setup("panel");
     gui.add( soundEngine.gain.set("gain", 0, -48, 12) );
@@ -36,6 +41,33 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update(){
     //Check GPIO Interface
+    
+    int chord = keyboardReader.checkChordsKeys();
+    int step = keyboardReader.checkModeKeys();
+    chordsEngine.increaseMode(step);
+//    chordsEngine.activeVoices = keyboardReader.checkPerformKeys();
+    
+    // voice modifier active
+    if(keyboardReader.checkVoiceModifier()){
+        std::vector<int> voices = keyboardReader.checkPerformKeys();
+        chordsEngine.setActiveVoices(voices);
+    }
+    else{
+        if(chord != -1){
+            setCurrentChord(chord);
+            soundEngine.triggerOn(chordsEngine.currentChord, chordsEngine.activeVoices);
+        }
+        else{
+            soundEngine.triggerOff(chordsEngine.currentChord, chordsEngine.activeVoices);
+        }
+        
+        //chord changed
+        if(chord != -1 && chord != currentChordNumber){
+            soundEngine.triggerOff(chordsEngine.currentChord, chordsEngine.activeVoices);
+            setCurrentChord(chord);
+            soundEngine.triggerOn(chordsEngine.currentChord, chordsEngine.activeVoices);
+        }
+    }
 }
 
 //--------------------------------------------------------------
@@ -43,11 +75,33 @@ void ofApp::draw(){
     
     ofClear(0);
     
-    ofDrawBitmapString(chordsEngine.currentChordName(), 10, 500);
+    ofSetColor(255);
+        
+    ofPushMatrix();
+        ofRectangle bounds = titleFont.getStringBoundingBox(chordsEngine.currentChordName(), 0, 0);
+        ofTranslate(256 - bounds.width/2, 256 - bounds.height/2, 0);
+        titleFont.drawString(chordsEngine.currentChordName(), 0, 0 );
+    ofPopMatrix();
     
-    gui.draw();
+    string mode = "Mode: " + to_string(chordsEngine.currentMode);
     
-    drawChordButtons();
+    bodyFont.drawString(mode, 20, 30);
+    
+    string voices = "Voices: ";
+    
+    for(int i = 0; i < chordsEngine.activeVoices.size(); i++){
+        voices += to_string(chordsEngine.activeVoices[i]);
+        voices += " ";
+    }
+    
+    bodyFont.drawString(voices, 20, 60);
+    
+    float tempo = roundf(soundEngine.engine.sequencer.meter_playhead() * 10) / 10;
+    bodyFont.drawString(to_string(tempo), 20, 90);
+    
+    if(keyboardReader.checkVoiceModifier()){
+        bodyFont.drawString("VOICES MODIFIER", 20, 120);
+    }
 }
 
 void ofApp::drawChordButtons(){
@@ -62,49 +116,13 @@ void ofApp::drawChordButtons(){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-    //Check Keyboard Interface
-    if(key == 'q'){
-        setCurrentChord(0);
-        soundEngine.triggerOn();
-    }
-    if(key == 'w'){
-        setCurrentChord(1);
-        soundEngine.triggerOn();
-    }
-    if(key == 'e'){
-        setCurrentChord(2);
-        soundEngine.triggerOn();
-    }
-    if(key == 'r'){
-        setCurrentChord(3);
-        soundEngine.triggerOn();
-    }
-    if(key == 'a'){
-        setCurrentChord(4);
-        soundEngine.triggerOn();
-    }
-    if(key == 's'){
-        setCurrentChord(5);
-        soundEngine.triggerOn();
-    }
-    if(key == 'd'){
-        setCurrentChord(6);
-        soundEngine.triggerOn();
-    }
-    
-    if(key == '1'){
-        chordsEngine.decreaseMode();
-    }
-    if(key == '2'){
-        chordsEngine.increaseMode();
-    }
+    keyboardReader.keyPressed(key);
 }
 
 //--------------------------------------------------------------
 void ofApp::keyReleased(int key){
-    //Check Keyboard Interface
-    if(key != '1' || key != '2')
-        soundEngine.triggerOff();
+    
+    keyboardReader.keyReleased(key);
 }
 
 //--------------------------------------------------------------
@@ -119,36 +137,21 @@ void ofApp::mouseDragged(int x, int y, int button){
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
-    
-    int intersection = -1;
-    
-    for(int i = 0; i < chordButtons.size(); i++){
-        if(chordButtons[i].inside(x, y) == true){
-            intersection = i;
-            setCurrentChord(intersection);
-            
-            break;
-        }
-    }
-    
-    if(intersection != -1){
-        soundEngine.triggerOn();
-    }
+
 }
 
 void ofApp::setCurrentChord(int chord){
 
+    currentChordNumber = chord;
     chordsEngine.setCurrentChord(chord, numVoices);
     
     for(int i = 0; i < numVoices; i++){
-        chordsEngine.currentChord[i]->toInt() >> soundEngine.polysynth.voices[i].in("pitch");
+        soundEngine.polysynth.setPitchForVoice(chordsEngine.currentChord[i]->toInt(), i);
     }
 }
 
 //--------------------------------------------------------------
 void ofApp::mouseReleased(int x, int y, int button){
-    
-    soundEngine.triggerOff();
 }
 
 //--------------------------------------------------------------

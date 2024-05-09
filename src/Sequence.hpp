@@ -9,5 +9,16 @@
 #define Sequence_hpp
 
 #include <stdio.h>
+#include "ofMain.h"
+#include "SequenceEvent.hpp"
 
 #endif /* Sequence_hpp */
+
+class Sequence {
+  
+public:
+    void addEvent(double t, bool trigger, deque<NotePtr> pitches);
+    std::vector<SequenceEvent> events;
+    
+    bool addedTriggerOn;
+};

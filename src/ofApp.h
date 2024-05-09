@@ -6,7 +6,7 @@
 #include "GuiApp.hpp"
 #include "SoundEngine.hpp"
 #include "ChordsEngine.hpp"
-
+#include "KeyboardReader.hpp"
 
 class ofApp : public ofBaseApp{
     
@@ -28,14 +28,16 @@ public:
     void gotMessage(ofMessage msg);
     
     // pdsp modules
-
-    
     ofxPanel gui;
+    ofTrueTypeFont titleFont;
+    ofTrueTypeFont bodyFont;
     
     int numVoices;
+    int currentChordNumber;
     
     SoundEngine soundEngine;
     ChordsEngine chordsEngine;
+    KeyboardReader keyboardReader;
     
     std::vector<ofRectangle> chordButtons;
     shared_ptr<GuiApp> guiApp;

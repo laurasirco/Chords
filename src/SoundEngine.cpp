@@ -22,14 +22,63 @@ void SoundEngine::setup(int numVoices){
     gain.enableSmoothing(50.f);
     
 //    engine.listDevices();
-    engine.setDeviceID(3);
+    engine.setDeviceID(2);
     engine.setup( 44100, 512, 3);
+    
+    engine.sequencer.setTempo(120.0);
+    engine.sequencer.play();
+    engine.sequencer.setMaxBars(4.0);
+    
+    triggered = false;
+    recording = true;
 }
 
-void SoundEngine::triggerOn(){
-    polysynth.triggerOnAllVoices();
+void SoundEngine::triggerOn(deque<NotePtr> pitches, std::vector<int> activeVoices){
+    if(!triggered){
+        if(activeVoices.size() > 0){
+            triggerOnSelectedVoices(activeVoices);
+        }
+        else{
+            polysynth.triggerOnAllVoices();
+        }
+        triggered = true;
+        
+        if(recording){
+            addEventToSequence(true, pitches, activeVoices);
+        }
+    }
 }
 
-void SoundEngine::triggerOff(){
+void SoundEngine::triggerOff(deque<NotePtr> pitches, std::vector<int> activeVoices){
+    if(triggered){
+        polysynth.triggerOffAllVoices();
+        triggered = false;
+        
+        if(recording){
+            addEventToSequence(false, pitches, activeVoices);
+        }
+    }
+}
+
+void SoundEngine::triggerOnSelectedVoices(std::vector<int> selectedVoices){
     polysynth.triggerOffAllVoices();
+    polysynth.triggerOnSelectedVoices(selectedVoices);
+}
+
+void SoundEngine::addEventToSequence(bool trigger, deque<NotePtr> pitches, std::vector<int> activeVoices){
+    
+    if(activeVoices.size() > 0){
+        deque<NotePtr> selectedPitches;
+        for(int i = 0; i < activeVoices.size(); i++)
+            selectedPitches.push_back(pitches[i]);
+        sequence.addEvent(engine.sequencer.meter_playhead(), trigger, selectedPitches);
+//        cout << trigger << ", " << selectedPitches.size() << ", " << engine.sequencer.meter_playhead() << endl;
+
+    }
+    else{
+        sequence.addEvent(engine.sequencer.meter_playhead(), trigger, pitches);
+//        cout << trigger << ", " << pitches.size() << ", " << engine.sequencer.meter_playhead() << endl;
+
+    }
+    
 }
