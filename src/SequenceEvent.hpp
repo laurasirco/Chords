@@ -10,19 +10,17 @@
 
 #include <stdio.h>
 #include "ofMain.h"
-#include "ofxMusicTheory.h"
-
-using namespace MusicTheory;
-
-#endif /* SequenceEvent_hpp */
+#include "Note.hpp"
 
 class SequenceEvent {
 public:
     double time;
     bool trigger;
-    deque<NotePtr> pitches;
+    std::vector<Note> pitches;
     
     bool operator< (const SequenceEvent &other) const {
             return time < other.time;
     }
 };
+
+#endif /* SequenceEvent_hpp */

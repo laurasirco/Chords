@@ -7,9 +7,14 @@
 
 #include "ChordsEngine.hpp"
 
+ChordsEngine::ChordsEngine(){
+    root = Note(NoteType::C);
+    setup(7);
+}
+
 void ChordsEngine::setup(int voices){
     
-    setupModes(Note::create("C"));
+    setupModes(root);
     setupChords(modes[0]);
     
     currentMode = 0;
@@ -25,29 +30,35 @@ void ChordsEngine::setup(int voices){
 
 }
 
-void ChordsEngine::setupChords(ScalePtr scale){
+void ChordsEngine::setupChords(Scale mode){
     chords.clear();
     
     for (std::size_t i=0; i < 7; i++) {
         
         std::vector<int> indexes = noteIndexesChordFromNoteNumber(int(i));
         
-        deque<NotePtr> chord;
+        std::vector<Note> chord;
         for(int j = 0; j < indexes.size(); j++){
             
             int index = indexes[j];
         
-            NotePtr note;
+            Note note = Note(0);
+            int interval = 0;
             if(index > 13){
                 index = index - 14;
-                note = scale->notes[index]->getOctaveUp()->getOctaveUp();
+                interval = mode.intervals[index];
+                note = root + interval;
+                note.octave += 2;
             }
             else if(index > 6){
                 index = index - 7;
-                note = scale->notes[index]->getOctaveUp();
+                interval = mode.intervals[index];
+                note = root + interval;
+                note.octave += 1;
             }
             else{
-                note = scale->notes[index];
+                interval = mode.intervals[index];
+                note = root + interval;
             }
             chord.push_back(note);
         }
@@ -56,23 +67,33 @@ void ChordsEngine::setupChords(ScalePtr scale){
     }
 }
 
-void ChordsEngine::setupModes(NotePtr root){
+void ChordsEngine::setupModes(Note root){
+    
+    root = root;
+    
     for(int i = 0; i < 7; i++){
         switch (i) {
             case 0:
-                modes.push_back(Scale::getIonian(root));
+                modes.push_back(Scale::ioian);
+                break;
             case 1:
-                modes.push_back(Scale::getDorian(root));
+                modes.push_back(Scale::dorian);
+                break;
             case 2:
-                modes.push_back(Scale::getPhrygian(root));
+                modes.push_back(Scale::phrygian);
+                break;
             case 3:
-                modes.push_back(Scale::getLydian(root));
+                modes.push_back(Scale::lydian);
+                break;
             case 4:
-                modes.push_back(Scale::getMixolydian(root));
+                modes.push_back(Scale::mixolydian);
+                break;
             case 5:
-                modes.push_back(Scale::getAeolian(root));
+                modes.push_back(Scale::aeolian);
+                break;
             case 6:
-                modes.push_back(Scale::getLocrian(root));
+                modes.push_back(Scale::locrian);
+                break;
             default:
                 break;
         }
@@ -109,11 +130,11 @@ std::vector<int> ChordsEngine::noteIndexesChordFromNoteNumber(int note){
     }
 }
 
-string ChordsEngine::currentChordName(){
+std::string ChordsEngine::currentChordName(){
     
-    vector<string> analyse = Chord::analyse(trimChordToVoices(currentChord, 3), true, false, false);
-    if(analyse.size() > 0)
-        return analyse[0];
+//    vector<string> analyse = Chord::analyse(trimChordToVoices(currentChord, 3), true, false, false);
+//    if(analyse.size() > 0)
+//        return analyse[0];
     
     return "";
 }
@@ -148,8 +169,8 @@ void ChordsEngine::setCurrentChord(int index, int voices){
     numVoices = voices;
 }
 
-deque<NotePtr> ChordsEngine::trimChordToVoices(deque<NotePtr> chord, int voices){
-    deque<NotePtr> trimmedChord;
+std::vector<Note> ChordsEngine::trimChordToVoices(std::vector<Note> chord, int voices){
+    std::vector<Note> trimmedChord;
     
     for(int i = 0; i < voices; i++){
         trimmedChord.push_back(chord[i]);

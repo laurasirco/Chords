@@ -11,13 +11,14 @@
 #include <stdio.h>
 #include "ofMain.h"
 #include "SequenceEvent.hpp"
+#include "Note.hpp"
 
 #endif /* Sequence_hpp */
 
 class Sequence {
   
 public:
-    void addEvent(double t, bool trigger, deque<NotePtr> pitches);
+    void addEvent(double t, bool trigger, std::vector<Note> pitches);
     std::vector<SequenceEvent> events;
     
     bool addedTriggerOn;

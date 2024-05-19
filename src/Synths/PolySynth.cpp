@@ -49,6 +49,7 @@ void PolySynth::triggerOnSelectedVoices(std::vector<int> selectedVoices){
 }
 
 void PolySynth::setPitchForVoice(int pitch, int voice){
+    cout << "voice: " << voice << ", pitch: " << pitch << endl;
     pitch >> voices[voice].in("pitch");
 }
 

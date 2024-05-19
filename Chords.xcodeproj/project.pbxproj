@@ -41,6 +41,7 @@
 		28309BBECD031F7BCD8DC98A /* SequencerGateOutput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04F149016C6BF3A1633A2D95 /* SequencerGateOutput.cpp */; };
 		2A5D3EF70712603CE1FDF020 /* ExternalInput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B9D6D82F2FDF7E05D875CCFE /* ExternalInput.cpp */; };
 		2B956D197D7C46BFB3ED49E1 /* LFO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 913F76968EFEA18959D29DB2 /* LFO.cpp */; };
+		2D3435815F19F2FA66C1CA47 /* Note.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03E829676ECC060FBF339568 /* Note.cpp */; };
 		2EF5A348E4EA08FD0DF6CCDE /* BiquadLPF2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5D99C02EADD50D22BCB0C7CD /* BiquadLPF2.cpp */; };
 		2F87412E72C3145BEE073BD1 /* VAOscillator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE8FBA723E5EF2C9AB7A2F2D /* VAOscillator.cpp */; };
 		2FFB3A7DE5EC2431473F1E0D /* CombFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A6CA0D95A902844EBC41A099 /* CombFilter.cpp */; };
@@ -51,6 +52,9 @@
 		3AEFE4FA8AD5C72671AD07F8 /* ofxRtMidiOut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 712B183BC00EBFFB1EEA5AB8 /* ofxRtMidiOut.cpp */; };
 		3AFCE6CE34F520843D292C78 /* ToGateTrigger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53AA676B2E7D8BF23CCA3D3F /* ToGateTrigger.cpp */; };
 		3B8815210C72FF34070EE2E4 /* DataOsc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7CF9EF7BFFD9F0639DB0A24 /* DataOsc.cpp */; };
+		3B902835281B63CA67DA3054 /* Interval.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96C80C87E47B99D75FE93EB6 /* Interval.cpp */; };
+		3C0C363542B5AD432CCCE023 /* ChordsEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 419E93042383B8E4C359571B /* ChordsEngine.cpp */; };
+		3F369115C4434D1170F95DD0 /* KeyboardReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2ABB5F16005C754760AE17E6 /* KeyboardReader.cpp */; };
 		3F6F4F896FC7FD9D3BA7C479 /* SVF2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA0B674C5960CE8B4261BC77 /* SVF2.cpp */; };
 		40FD0C10DB93F59711A63ED4 /* Processor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BAE582C4088C98A1A319041E /* Processor.cpp */; };
 		411225F3B160321EAA4F0999 /* Saturator1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A351DC608F3B618FDCD5ED8A /* Saturator1.cpp */; };
@@ -63,16 +67,21 @@
 		482642705C821BF8DE41A6B3 /* LHDelay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 694032EE03F98786445C3051 /* LHDelay.cpp */; };
 		483908258D00B98B4BE69F07 /* ofxLabel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78D67A00EB899FAC09430597 /* ofxLabel.cpp */; };
 		48F5FB2B3D529A743517F742 /* BasicNodes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D08C4BFAA20677906DC638D /* BasicNodes.cpp */; };
+		4A42FD352C3E7A49BE404214 /* ofxBpm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C22C6DB76E28E82935AD0646 /* ofxBpm.cpp */; };
 		4ADB88E2FB52E76A471065DE /* ofxOscParameterSync.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0AED834CE4DEC5260AF302A2 /* ofxOscParameterSync.cpp */; };
 		4BECA4BDAEC9B0EF60C573B9 /* OneMinusInput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84E041426F9E460F5E084FE0 /* OneMinusInput.cpp */; };
 		4C0F52BCCA5B6EBF6958DFF6 /* MaxValue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1082494DCEBFE30E67FA6584 /* MaxValue.cpp */; };
+		4C935B82B4A1EE80BC80BFBF /* PolySynth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C935F35C96A7825778AF8B6 /* PolySynth.cpp */; };
 		4D996C3DB2776F6BB8F1B841 /* Preparable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 47BB0127AF5CAAB65A26700E /* Preparable.cpp */; };
 		510CAFE035E576A4E1502D52 /* UdpSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6DEF695B88BA5FAACEAA937 /* UdpSocket.cpp */; };
 		5159EDB1680026841970A40E /* VAFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 369E38E38035498F6C7602A8 /* VAFilter.cpp */; };
 		55169838B1C1CE8A3035E2D8 /* ofxAudioFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3794A57D8EFC646921513FD9 /* ofxAudioFile.cpp */; };
+		554279AC74A1EE2E15BED19B /* GuiApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32858E9AA3F299C01D10DE0D /* GuiApp.cpp */; };
 		55EEAF431777946C374665C8 /* ofxPDSPFunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33CB2223224C7C100911D293 /* ofxPDSPFunctions.cpp */; };
 		5631F998E99ECAB1AECCCB6E /* BiquadBPF2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BEBE41C3671C9E523F9B66B3 /* BiquadBPF2.cpp */; };
+		5731E689AA1444840BB8875D /* ChordsTrack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64E68A463EBDA7701662C96E /* ChordsTrack.cpp */; };
 		5864AD82E20F15536D054EA3 /* ofxOscMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF49D76C45D5DB505A234880 /* ofxOscMessage.cpp */; };
+		5C805237A3A6F90CA13AF770 /* Scale.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F7CA887282D928657E4231F /* Scale.cpp */; };
 		5CBB2AB3A60F65431D7B555D /* ofxButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C88333E71C9457E441C33474 /* ofxButton.cpp */; };
 		5CE1828E7071CAE3680657B7 /* ZeroUpSampler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 030CA9F005816DB36EEC1BCE /* ZeroUpSampler.cpp */; };
 		5E1E6637759729F028626C9C /* BitNoise.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F90ECD8656DA7C7875E8A43 /* BitNoise.cpp */; };
@@ -139,6 +148,7 @@
 		A570644D9D2922FFBEC49276 /* LowShelfEQ.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C02DA5EEEB5F569E5D83EA14 /* LowShelfEQ.cpp */; };
 		A5E99C942762B32997AEC08F /* Scope.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 02B7A619CE2C4A83959A4463 /* Scope.cpp */; };
 		A66CA22144EFFB119D24F52F /* SRDelay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACA9307B015083D1DF8E61E3 /* SRDelay.cpp */; };
+		A8B58BA4BD98D80632E132A6 /* Track.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 91D83EAFD87A64877C1192AD /* Track.cpp */; };
 		A982ADA9C3A8432A4B3C21C9 /* BasiVerb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0790F1F5A84F1A43B90071F3 /* BasiVerb.cpp */; };
 		ABD9148FED514BF17CB8B804 /* SineFB.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 026E53671598BFDF47135E4C /* SineFB.cpp */; };
 		AC13A02868FBAEFE0731690E /* SequencerBridge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA4CBA949E00D1145A1F86CD /* SequencerBridge.cpp */; };
@@ -166,23 +176,18 @@
 		C6FE64F74F1EA1D98C8F9847 /* ofxMidiMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0E7EDA67EDF213FC0E83D17 /* ofxMidiMessage.cpp */; };
 		CBDBD78569034426C075EF27 /* sanity_check.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA1E60F60F359C1265A9A170 /* sanity_check.cpp */; };
 		CCBFD5B69544E25FCDFC98C4 /* SequencerMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 008631CBB708353533C123E9 /* SequencerMessage.cpp */; };
+		CD26BE12DEF753E796361BA6 /* SequenceEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40976127BE86271139459D4C /* SequenceEvent.cpp */; };
 		CE471530C08E1EFB89FB2AE7 /* AALowShelfEQ.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A7C7D6A1A62C79C8590AFCF /* AALowShelfEQ.cpp */; };
 		CF2118E50234A78A6F982A71 /* WaveTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C84D383466B8E2F4397BEB9 /* WaveTable.cpp */; };
 		D04CA0D5B8B3FE8D50E0EBA1 /* Clockable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F4D5919570B490BB9BD2A80 /* Clockable.cpp */; };
 		D0F8CD809A19CE29C0DAE6AD /* BufferShell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04A56ED083927A620A67B4CB /* BufferShell.cpp */; };
 		D113C19E0BE26626F36EB63C /* random.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 34148315621CAFFD707F5F55 /* random.cpp */; };
 		D16429E710BAB8822B6FC8A4 /* BipolarToUnipolar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8893580B3D78DF30E8137E2 /* BipolarToUnipolar.cpp */; };
-		D341891A2BBF1DCC00ED4131 /* PolySynth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34189182BBF1DCC00ED4131 /* PolySynth.cpp */; };
-		D341891D2BC974A600ED4131 /* GuiApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D341891B2BC974A600ED4131 /* GuiApp.cpp */; };
-		D34189202BC9781200ED4131 /* ChordsEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D341891E2BC9781200ED4131 /* ChordsEngine.cpp */; };
-		D34189232BC9781E00ED4131 /* SoundEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34189212BC9781E00ED4131 /* SoundEngine.cpp */; };
-		D34189262BE3ABB700ED4131 /* KeyboardReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34189242BE3ABB700ED4131 /* KeyboardReader.cpp */; };
-		D34189292BE7A89400ED4131 /* Sequence.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34189272BE7A89400ED4131 /* Sequence.cpp */; };
-		D341892C2BE7CD8F00ED4131 /* SequenceEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D341892A2BE7CD8F00ED4131 /* SequenceEvent.cpp */; };
 		D5AEE642FF9A47D6C359B84E /* OscParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FED1409DB8900518780BFAF6 /* OscParser.cpp */; };
 		D5BBE6B38445B8231F47E133 /* Panner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AEA1D75CCCDA872FDF288DE /* Panner.cpp */; };
 		D70EEB0FDDA2C6ED1251F311 /* MidiKeysBuffers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6053860F3448FEFEA173B20F /* MidiKeysBuffers.cpp */; };
 		D7BA818328497E4D9B14FE19 /* ValueControl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78AB7BB57DADA40B5B757A6E /* ValueControl.cpp */; };
+		DAA6EB8EF64DD54A819BFA3F /* Sequence.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA51CC4BE8F62E5A2D906BF5 /* Sequence.cpp */; };
 		DB3086ABC120CBFB7B43C646 /* BandLimit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C7950D4F4D35EF9B1390CED /* BandLimit.cpp */; };
 		DC9854971FEF1CE0A994F9C8 /* LowCut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26DBB162BA3126ABA4B0AE66 /* LowCut.cpp */; };
 		DD03CE41FFF4781ED560E36C /* BLEPTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 66C3BBF5B2F7EF82737A0E5F /* BLEPTable.cpp */; };
@@ -212,6 +217,7 @@
 		F7B94738CAF09F9FEE8F193F /* MidiOut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ECA2408A938B3DAF6252B1DB /* MidiOut.cpp */; };
 		FB0F0C48814BE13F3E35E963 /* MidiPads.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 308ED9277CC09588450E32F4 /* MidiPads.cpp */; };
 		FD07A5391F71AB8772872217 /* AAPeakEQ.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F92EEC74EAC7FE3350BCC6B0 /* AAPeakEQ.cpp */; };
+		FF6DC6203B25BED950CD0313 /* SoundEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BEB27ED03FC629B0FEAB8AD8 /* SoundEngine.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -239,6 +245,7 @@
 		030CA9F005816DB36EEC1BCE /* ZeroUpSampler.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ZeroUpSampler.cpp; path = ../../../addons/ofxPDSP/src/DSP/resamplers/ZeroUpSampler.cpp; sourceTree = SOURCE_ROOT; };
 		034E4E157AF01B0524795F61 /* MidiControls.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = MidiControls.h; path = ../../../addons/ofxPDSP/src/ofx/MidiControls.h; sourceTree = SOURCE_ROOT; };
 		038881051BD1C8E2154EA814 /* pdspCore.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = pdspCore.h; path = ../../../addons/ofxPDSP/src/DSP/pdspCore.h; sourceTree = SOURCE_ROOT; };
+		03E829676ECC060FBF339568 /* Note.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Note.cpp; path = src/MusicTheory/Note.cpp; sourceTree = SOURCE_ROOT; };
 		03F87A6C414CBC08E53BB469 /* operators.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = operators.h; path = ../../../addons/ofxPDSP/src/DSP/core/operators.h; sourceTree = SOURCE_ROOT; };
 		04A56ED083927A620A67B4CB /* BufferShell.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = BufferShell.cpp; path = ../../../addons/ofxPDSP/src/DSP/core/BufferShell.cpp; sourceTree = SOURCE_ROOT; };
 		04F149016C6BF3A1633A2D95 /* SequencerGateOutput.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = SequencerGateOutput.cpp; path = ../../../addons/ofxPDSP/src/DSP/control/SequencerGateOutput.cpp; sourceTree = SOURCE_ROOT; };
@@ -304,9 +311,11 @@
 		1C71119BC48CF1A0F6F1400A /* GrainWindow.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GrainWindow.h; path = ../../../addons/ofxPDSP/src/DSP/samplers/GrainWindow.h; sourceTree = SOURCE_ROOT; };
 		1C745EEA0D47E8A017C4ECE8 /* Wrapper.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Wrapper.cpp; path = ../../../addons/ofxPDSP/src/ofx/Wrapper.cpp; sourceTree = SOURCE_ROOT; };
 		1C8FFFEB619B6CDA992E9C87 /* LinToDB.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = LinToDB.cpp; path = ../../../addons/ofxPDSP/src/DSP/utility/LinToDB.cpp; sourceTree = SOURCE_ROOT; };
+		1D46E20ED4E140373378280F /* Interval.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Interval.hpp; path = src/MusicTheory/Interval.hpp; sourceTree = SOURCE_ROOT; };
 		1D548216CC2978215BFDAC85 /* engine.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = engine.h; path = ../../../addons/ofxPoco/libs/openssl/include/openssl/engine.h; sourceTree = SOURCE_ROOT; };
 		1DD3D46C7338FF0825376E6E /* WaveTable.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = WaveTable.h; path = ../../../addons/ofxPDSP/src/DSP/oscillators/wavetable/WaveTable.h; sourceTree = SOURCE_ROOT; };
 		1DF19FD740F88F88D62FD39F /* TriggerGeiger.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = TriggerGeiger.h; path = ../../../addons/ofxPDSP/src/DSP/control/TriggerGeiger.h; sourceTree = SOURCE_ROOT; };
+		1EAA550E2689163331F57628 /* Track.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Track.hpp; path = src/Tracks/Track.hpp; sourceTree = SOURCE_ROOT; };
 		1F748A62D66A8B3F170274E4 /* Scope.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Scope.h; path = ../../../addons/ofxPDSP/src/ofx/Scope.h; sourceTree = SOURCE_ROOT; };
 		1FF50C94CEE81D6D363842CB /* UsesSlew.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = UsesSlew.h; path = ../../../addons/ofxPDSP/src/DSP/helpers/UsesSlew.h; sourceTree = SOURCE_ROOT; };
 		208298154B11456DCD0BE131 /* ofxRtMidiIn.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxRtMidiIn.h; path = ../../../addons/ofxMidi/src/desktop/ofxRtMidiIn.h; sourceTree = SOURCE_ROOT; };
@@ -336,6 +345,7 @@
 		2A61AA76A834926F81F48ADC /* async.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = async.h; path = ../../../addons/ofxPoco/libs/openssl/include/openssl/async.h; sourceTree = SOURCE_ROOT; };
 		2A7C7D6A1A62C79C8590AFCF /* AALowShelfEQ.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = AALowShelfEQ.cpp; path = ../../../addons/ofxPDSP/src/modules/equalizers/AALowShelfEQ.cpp; sourceTree = SOURCE_ROOT; };
 		2A8E6EE70DD635A657EEEC99 /* x509v3.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = x509v3.h; path = ../../../addons/ofxPoco/libs/openssl/include/openssl/x509v3.h; sourceTree = SOURCE_ROOT; };
+		2ABB5F16005C754760AE17E6 /* KeyboardReader.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = KeyboardReader.cpp; path = src/KeyboardReader.cpp; sourceTree = SOURCE_ROOT; };
 		2B02BBEE78095BA25D1F4CCA /* kernel_sqrtB.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = kernel_sqrtB.h; path = ../../../addons/ofxPDSP/src/math/simd/kernels/kernel_sqrtB.h; sourceTree = SOURCE_ROOT; };
 		2B3413188866E4CB280223A9 /* ofxPDSPFunctions.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxPDSPFunctions.h; path = ../../../addons/ofxPDSP/src/ofx/ofxPDSPFunctions.h; sourceTree = SOURCE_ROOT; };
 		2BADBE02B461220CE3D3C23B /* CheapTri.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = CheapTri.cpp; path = ../../../addons/ofxPDSP/src/DSP/oscillators/cheap/CheapTri.cpp; sourceTree = SOURCE_ROOT; };
@@ -345,6 +355,7 @@
 		2D7BD935E5507E34B9D565E7 /* cosine.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cosine.h; path = ../../../addons/ofxPDSP/src/math/interpolation/cosine.h; sourceTree = SOURCE_ROOT; };
 		2D83EC0F7FF772DE67256FA5 /* Compressor.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Compressor.h; path = ../../../addons/ofxPDSP/src/modules/dynamics/Compressor.h; sourceTree = SOURCE_ROOT; };
 		2E8E8D986F241F2871FB0BDF /* ClockedPhasor.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ClockedPhasor.h; path = ../../../addons/ofxPDSP/src/DSP/oscillators/phasors/ClockedPhasor.h; sourceTree = SOURCE_ROOT; };
+		2F7CA887282D928657E4231F /* Scale.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Scale.cpp; path = src/MusicTheory/Scale.cpp; sourceTree = SOURCE_ROOT; };
 		2FD4B0329909D3527F003494 /* UdpSocket.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = UdpSocket.h; path = ../../../addons/ofxOsc/libs/oscpack/src/ip/UdpSocket.h; sourceTree = SOURCE_ROOT; };
 		308ED9277CC09588450E32F4 /* MidiPads.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = MidiPads.cpp; path = ../../../addons/ofxPDSP/src/ofx/MidiPads.cpp; sourceTree = SOURCE_ROOT; };
 		30ECF0B7508757A9CB0091C9 /* BiquadAPF2.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = BiquadAPF2.cpp; path = ../../../addons/ofxPDSP/src/DSP/filters/biquads/BiquadAPF2.cpp; sourceTree = SOURCE_ROOT; };
@@ -353,6 +364,7 @@
 		316308608A7A2E0478355047 /* SerialOut.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = SerialOut.h; path = ../../../addons/ofxPDSP/src/ofx/SerialOut.h; sourceTree = SOURCE_ROOT; };
 		3196BB02FD710583AD1E8682 /* opensslconf_osx.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = opensslconf_osx.h; path = ../../../addons/ofxPoco/libs/openssl/include/openssl/opensslconf_osx.h; sourceTree = SOURCE_ROOT; };
 		31F38F6C22847F8F258B36CA /* header.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = header.h; path = ../../../addons/ofxPDSP/src/math/header.h; sourceTree = SOURCE_ROOT; };
+		32858E9AA3F299C01D10DE0D /* GuiApp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = GuiApp.cpp; path = src/GuiApp.cpp; sourceTree = SOURCE_ROOT; };
 		33CB2223224C7C100911D293 /* ofxPDSPFunctions.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxPDSPFunctions.cpp; path = ../../../addons/ofxPDSP/src/ofx/ofxPDSPFunctions.cpp; sourceTree = SOURCE_ROOT; };
 		34148315621CAFFD707F5F55 /* random.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = random.cpp; path = ../../../addons/ofxPDSP/src/math/random/random.cpp; sourceTree = SOURCE_ROOT; };
 		344EA36CBADBF32D2B7391AC /* BiquadHighShelf.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = BiquadHighShelf.h; path = ../../../addons/ofxPDSP/src/DSP/filters/biquads/BiquadHighShelf.h; sourceTree = SOURCE_ROOT; };
@@ -360,14 +372,16 @@
 		355218D9B12A28AD4F099029 /* txt_db.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = txt_db.h; path = ../../../addons/ofxPoco/libs/openssl/include/openssl/txt_db.h; sourceTree = SOURCE_ROOT; };
 		357D088CE88C8A59A9640B69 /* BiquadHPF2.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = BiquadHPF2.h; path = ../../../addons/ofxPDSP/src/DSP/filters/biquads/BiquadHPF2.h; sourceTree = SOURCE_ROOT; };
 		35CEC55F98686A1EA198F550 /* ofxPDSP.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxPDSP.h; path = ../../../addons/ofxPDSP/src/ofxPDSP.h; sourceTree = SOURCE_ROOT; };
-		36385A577753C8CA301DE4F5 /* Scale.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Scale.h; path = ../../../addons/ofxMusicTheory/src/harmony/Scale.h; sourceTree = SOURCE_ROOT; };
 		369E38E38035498F6C7602A8 /* VAFilter.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = VAFilter.cpp; path = ../../../addons/ofxPDSP/src/modules/filters/VAFilter.cpp; sourceTree = SOURCE_ROOT; };
+		3702D3B77C1CF78F8EC66E92 /* SoundEngine.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = SoundEngine.hpp; path = src/SoundEngine.hpp; sourceTree = SOURCE_ROOT; };
 		3794A57D8EFC646921513FD9 /* ofxAudioFile.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxAudioFile.cpp; path = ../../../addons/ofxAudioFile/src/ofxAudioFile.cpp; sourceTree = SOURCE_ROOT; };
+		3797529AE5E9DE225B0A7BDF /* ofxBpm.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxBpm.h; path = src/ofxBpm.h; sourceTree = SOURCE_ROOT; };
 		37A00AAE55CA7B437073B0C9 /* bio.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = bio.h; path = ../../../addons/ofxPoco/libs/openssl/include/openssl/bio.h; sourceTree = SOURCE_ROOT; };
 		37D0840E2E9A305D6BC51E16 /* TriggerControl.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = TriggerControl.cpp; path = ../../../addons/ofxPDSP/src/DSP/control/TriggerControl.cpp; sourceTree = SOURCE_ROOT; };
 		384632C60FA9BCAABA60DB44 /* DPWTri.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = DPWTri.h; path = ../../../addons/ofxPDSP/src/DSP/oscillators/antialiased/DPWTri.h; sourceTree = SOURCE_ROOT; };
 		3877FA7012B8744499FB320A /* ADSR.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ADSR.h; path = ../../../addons/ofxPDSP/src/DSP/envelopes/ADSR.h; sourceTree = SOURCE_ROOT; };
 		38BF298013AF8BFFC42E7E43 /* AbsoluteValue.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = AbsoluteValue.h; path = ../../../addons/ofxPDSP/src/DSP/dynamics/AbsoluteValue.h; sourceTree = SOURCE_ROOT; };
+		38DCB86E1E4D72C48BC7A6AB /* ChordsEngine.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ChordsEngine.hpp; path = src/ChordsEngine.hpp; sourceTree = SOURCE_ROOT; };
 		39BD1D3C7BC2F87F71925BBA /* MessageBuffer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = MessageBuffer.cpp; path = ../../../addons/ofxPDSP/src/messages/MessageBuffer.cpp; sourceTree = SOURCE_ROOT; };
 		3A2445FF9201252EDCEE043B /* WhiteNoise.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = WhiteNoise.h; path = ../../../addons/ofxPDSP/src/DSP/random/WhiteNoise.h; sourceTree = SOURCE_ROOT; };
 		3B0612CEEF0BDF794767E467 /* MidiOut.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = MidiOut.h; path = ../../../addons/ofxPDSP/src/ofx/MidiOut.h; sourceTree = SOURCE_ROOT; };
@@ -379,9 +393,11 @@
 		3FB761163708BA36E130B1DC /* OneMinusInput.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = OneMinusInput.h; path = ../../../addons/ofxPDSP/src/DSP/utility/OneMinusInput.h; sourceTree = SOURCE_ROOT; };
 		3FED4C887C37A3FD70D004E8 /* ui.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ui.h; path = ../../../addons/ofxPoco/libs/openssl/include/openssl/ui.h; sourceTree = SOURCE_ROOT; };
 		405D10AFD267E4E6CEB3E4F9 /* ExtSequencer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ExtSequencer.cpp; path = ../../../addons/ofxPDSP/src/messages/ExtSequencer.cpp; sourceTree = SOURCE_ROOT; };
+		40976127BE86271139459D4C /* SequenceEvent.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = SequenceEvent.cpp; path = src/SequenceEvent.cpp; sourceTree = SOURCE_ROOT; };
 		40F8AFFCAB8F69A35DA9FD2A /* ssl3.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ssl3.h; path = ../../../addons/ofxPoco/libs/openssl/include/openssl/ssl3.h; sourceTree = SOURCE_ROOT; };
 		413A17C649E602A6194BB657 /* fastsin.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fastsin.h; path = ../../../addons/ofxPDSP/src/math/trig/fastsin.h; sourceTree = SOURCE_ROOT; };
 		413E48C985AFC06586413FB9 /* pkcs7.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = pkcs7.h; path = ../../../addons/ofxPoco/libs/openssl/include/openssl/pkcs7.h; sourceTree = SOURCE_ROOT; };
+		419E93042383B8E4C359571B /* ChordsEngine.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ChordsEngine.cpp; path = src/ChordsEngine.cpp; sourceTree = SOURCE_ROOT; };
 		41AC61CA3DA884A527178EA4 /* inlines.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = inlines.h; path = ../../../addons/ofxPDSP/src/math/simd/core/inlines.h; sourceTree = SOURCE_ROOT; };
 		41BFBD3FBBE333DD3AF87209 /* Sequence.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Sequence.cpp; path = ../../../addons/ofxPDSP/src/sequencer/Sequence.cpp; sourceTree = SOURCE_ROOT; };
 		41FBD64AE9AA0B5EF1A5727C /* SRDelay.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = SRDelay.h; path = ../../../addons/ofxPDSP/src/DSP/delays/SRDelay.h; sourceTree = SOURCE_ROOT; };
@@ -408,7 +424,6 @@
 		497DDB0B7AD97CCBA7FDB133 /* ofxMidiClock.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxMidiClock.h; path = ../../../addons/ofxMidi/src/ofxMidiClock.h; sourceTree = SOURCE_ROOT; };
 		49CBE4CD19A6EF9A1059C800 /* SVFilter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = SVFilter.h; path = ../../../addons/ofxPDSP/src/modules/filters/SVFilter.h; sourceTree = SOURCE_ROOT; };
 		4A941E617512F1E87E294653 /* x509_vfy.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = x509_vfy.h; path = ../../../addons/ofxPoco/libs/openssl/include/openssl/x509_vfy.h; sourceTree = SOURCE_ROOT; };
-		4B3645A4BC245BF6E6D29835 /* Intervals.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Intervals.h; path = ../../../addons/ofxMusicTheory/src/harmony/Intervals.h; sourceTree = SOURCE_ROOT; };
 		4BF97AC133A743F7D2E222B6 /* bn.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = bn.h; path = ../../../addons/ofxPoco/libs/openssl/include/openssl/bn.h; sourceTree = SOURCE_ROOT; };
 		4C6F6330A2934B9C9F5D90C9 /* LinearCrossfader.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = LinearCrossfader.h; path = ../../../addons/ofxPDSP/src/modules/signal/LinearCrossfader.h; sourceTree = SOURCE_ROOT; };
 		4CEEFC1C4B9575573E12AF34 /* PositiveValue.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = PositiveValue.h; path = ../../../addons/ofxPDSP/src/DSP/dynamics/PositiveValue.h; sourceTree = SOURCE_ROOT; };
@@ -430,6 +445,7 @@
 		53AA676B2E7D8BF23CCA3D3F /* ToGateTrigger.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ToGateTrigger.cpp; path = ../../../addons/ofxPDSP/src/DSP/control/ToGateTrigger.cpp; sourceTree = SOURCE_ROOT; };
 		54963F537E4D6691F22BB507 /* SequencerSection.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = SequencerSection.h; path = ../../../addons/ofxPDSP/src/sequencer/SequencerSection.h; sourceTree = SOURCE_ROOT; };
 		54CABD394E792C3E23555D29 /* DPWTri.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DPWTri.cpp; path = ../../../addons/ofxPDSP/src/DSP/oscillators/antialiased/DPWTri.cpp; sourceTree = SOURCE_ROOT; };
+		54CE657ECF96EDC567449C20 /* Note.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Note.hpp; path = src/MusicTheory/Note.hpp; sourceTree = SOURCE_ROOT; };
 		54DC82C20E63BAC0F0F926FA /* ofxMidiTimecode.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxMidiTimecode.h; path = ../../../addons/ofxMidi/src/ofxMidiTimecode.h; sourceTree = SOURCE_ROOT; };
 		552D6A3809AC0B81AC1B7477 /* TriggerGeiger.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = TriggerGeiger.cpp; path = ../../../addons/ofxPDSP/src/DSP/control/TriggerGeiger.cpp; sourceTree = SOURCE_ROOT; };
 		5565E3718DB1D46F1214EBFC /* md2.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = md2.h; path = ../../../addons/ofxPoco/libs/openssl/include/openssl/md2.h; sourceTree = SOURCE_ROOT; };
@@ -438,7 +454,6 @@
 		5660C57F9D80368083297D3A /* FMOperator.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = FMOperator.h; path = ../../../addons/ofxPDSP/src/modules/oscillators/FMOperator.h; sourceTree = SOURCE_ROOT; };
 		56DAF0A34EFCF5E2A5E60386 /* rand.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = rand.h; path = ../../../addons/ofxPoco/libs/openssl/include/openssl/rand.h; sourceTree = SOURCE_ROOT; };
 		5749F2535EC575188CD8B7EA /* md5.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = md5.h; path = ../../../addons/ofxPoco/libs/openssl/include/openssl/md5.h; sourceTree = SOURCE_ROOT; };
-		575C14A9D30AF033C1856702 /* Chord.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Chord.h; path = ../../../addons/ofxMusicTheory/src/harmony/Chord.h; sourceTree = SOURCE_ROOT; };
 		57F5E4DCB8D316A19135D904 /* ZeroUpSampler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ZeroUpSampler.h; path = ../../../addons/ofxPDSP/src/DSP/resamplers/ZeroUpSampler.h; sourceTree = SOURCE_ROOT; };
 		59A416378F4E6561D2059B80 /* DBtoLin.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = DBtoLin.h; path = ../../../addons/ofxPDSP/src/DSP/utility/DBtoLin.h; sourceTree = SOURCE_ROOT; };
 		59C2B545E58FD4BD4BF2A918 /* SequencerMessage.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = SequencerMessage.h; path = ../../../addons/ofxPDSP/src/sequencer/SequencerMessage.h; sourceTree = SOURCE_ROOT; };
@@ -451,6 +466,7 @@
 		5D05C2B0CBAFC3F9F2F693AF /* tls1.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = tls1.h; path = ../../../addons/ofxPoco/libs/openssl/include/openssl/tls1.h; sourceTree = SOURCE_ROOT; };
 		5D16F2247C54CF0DB465D228 /* Amp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Amp.cpp; path = ../../../addons/ofxPDSP/src/DSP/core/Amp.cpp; sourceTree = SOURCE_ROOT; };
 		5D99C02EADD50D22BCB0C7CD /* BiquadLPF2.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = BiquadLPF2.cpp; path = ../../../addons/ofxPDSP/src/DSP/filters/biquads/BiquadLPF2.cpp; sourceTree = SOURCE_ROOT; };
+		5DC895B70A68089B50CB5D3F /* KeyboardReader.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = KeyboardReader.hpp; path = src/KeyboardReader.hpp; sourceTree = SOURCE_ROOT; };
 		5FF82D65BCF6E5B3C14FDF57 /* UsesSlew.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = UsesSlew.cpp; path = ../../../addons/ofxPDSP/src/DSP/helpers/UsesSlew.cpp; sourceTree = SOURCE_ROOT; };
 		6030E3FBBCE184901E2CCC93 /* TriggerControl.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = TriggerControl.h; path = ../../../addons/ofxPDSP/src/DSP/control/TriggerControl.h; sourceTree = SOURCE_ROOT; };
 		6053860F3448FEFEA173B20F /* MidiKeysBuffers.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = MidiKeysBuffers.cpp; path = ../../../addons/ofxPDSP/src/ofx/helper/MidiKeysBuffers.cpp; sourceTree = SOURCE_ROOT; };
@@ -466,10 +482,10 @@
 		6430B05D3126A2614D21C527 /* flags.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = flags.h; path = ../../../addons/ofxPDSP/src/flags.h; sourceTree = SOURCE_ROOT; };
 		645BE42FCDC51CB005E7AADA /* FDLConvolver.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = FDLConvolver.cpp; path = ../../../addons/ofxPDSP/src/DSP/convolution/FDLConvolver.cpp; sourceTree = SOURCE_ROOT; };
 		64D45D3FC56C30943AC64D5E /* aes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = aes.h; path = ../../../addons/ofxPoco/libs/openssl/include/openssl/aes.h; sourceTree = SOURCE_ROOT; };
+		64E68A463EBDA7701662C96E /* ChordsTrack.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ChordsTrack.cpp; path = src/Tracks/ChordsTrack.cpp; sourceTree = SOURCE_ROOT; };
 		6553CCFFF855C2FD33264083 /* Bitcruncher.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Bitcruncher.h; path = ../../../addons/ofxPDSP/src/DSP/signal/Bitcruncher.h; sourceTree = SOURCE_ROOT; };
 		6561A45B32F5387FB87BD8DC /* header.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = header.h; path = ../../../addons/ofxPDSP/src/messages/header.h; sourceTree = SOURCE_ROOT; };
 		65EEFA3DA3526E9CDD9C21F9 /* ofxOscBundle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxOscBundle.cpp; path = ../../../addons/ofxOsc/src/ofxOscBundle.cpp; sourceTree = SOURCE_ROOT; };
-		668DED1C0E25E4BC626DFCE1 /* Diatonic.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Diatonic.h; path = ../../../addons/ofxMusicTheory/src/harmony/Diatonic.h; sourceTree = SOURCE_ROOT; };
 		66C3BBF5B2F7EF82737A0E5F /* BLEPTable.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = BLEPTable.cpp; path = ../../../addons/ofxPDSP/src/DSP/oscillators/antialiased/BLEP/BLEPTable.cpp; sourceTree = SOURCE_ROOT; };
 		67660F0126AE09BD5C834BD9 /* TriggeredGrain.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = TriggeredGrain.h; path = ../../../addons/ofxPDSP/src/modules/samplers/TriggeredGrain.h; sourceTree = SOURCE_ROOT; };
 		67AD080A2A62A398BC832D7A /* evp.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = evp.h; path = ../../../addons/ofxPoco/libs/openssl/include/openssl/evp.h; sourceTree = SOURCE_ROOT; };
@@ -491,6 +507,7 @@
 		712B183BC00EBFFB1EEA5AB8 /* ofxRtMidiOut.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxRtMidiOut.cpp; path = ../../../addons/ofxMidi/src/desktop/ofxRtMidiOut.cpp; sourceTree = SOURCE_ROOT; };
 		717EA7FE856A54CB04022C8C /* operators.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = operators.cpp; path = ../../../addons/ofxPDSP/src/DSP/core/operators.cpp; sourceTree = SOURCE_ROOT; };
 		7200EB1EC64977ED08AC0111 /* ofxXmlPoco.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxXmlPoco.h; path = ../../../addons/ofxPoco/src/ofxXmlPoco.h; sourceTree = SOURCE_ROOT; };
+		729D3C3D126A7D627AAAD9DE /* Sequence.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Sequence.hpp; path = src/Sequence.hpp; sourceTree = SOURCE_ROOT; };
 		72E44B87B9950B163021DD59 /* MultiLadder4.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = MultiLadder4.h; path = ../../../addons/ofxPDSP/src/DSP/filters/MultiLadder4.h; sourceTree = SOURCE_ROOT; };
 		7327E27E98C74DE46DDB74FF /* header.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = header.h; path = ../../../addons/ofxPDSP/src/sequencer/header.h; sourceTree = SOURCE_ROOT; };
 		73D92BD323AEA4C3832AB932 /* AudioFFT.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = AudioFFT.h; path = ../../../addons/ofxPDSP/libs/audiofft/AudioFFT.h; sourceTree = SOURCE_ROOT; };
@@ -558,6 +575,7 @@
 		90B41C605516BBB0642AE81E /* DecayStage.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = DecayStage.h; path = ../../../addons/ofxPDSP/src/DSP/envelopes/stages/DecayStage.h; sourceTree = SOURCE_ROOT; };
 		90D21B6F783D90D38090CA09 /* nonlinear1.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = nonlinear1.h; path = ../../../addons/ofxPDSP/src/math/dsphelpers/nonlinear1.h; sourceTree = SOURCE_ROOT; };
 		913F76968EFEA18959D29DB2 /* LFO.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = LFO.cpp; path = ../../../addons/ofxPDSP/src/modules/oscillators/LFO.cpp; sourceTree = SOURCE_ROOT; };
+		91D83EAFD87A64877C1192AD /* Track.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Track.cpp; path = src/Tracks/Track.cpp; sourceTree = SOURCE_ROOT; };
 		921C286850C9E07B2869DE90 /* BiquadHighShelf.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = BiquadHighShelf.cpp; path = ../../../addons/ofxPDSP/src/DSP/filters/biquads/BiquadHighShelf.cpp; sourceTree = SOURCE_ROOT; };
 		938214A2795AA8FED29086DB /* ofxMidiConstants.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxMidiConstants.h; path = ../../../addons/ofxMidi/src/ofxMidiConstants.h; sourceTree = SOURCE_ROOT; };
 		94B3C3C21F92F9310CA90986 /* ofxBaseMidi.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxBaseMidi.cpp; path = ../../../addons/ofxMidi/src/ofxBaseMidi.cpp; sourceTree = SOURCE_ROOT; };
@@ -567,6 +585,7 @@
 		9585366BC2B708EB70B3F84E /* header.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = header.h; path = ../../../addons/ofxPDSP/src/modules/header.h; sourceTree = SOURCE_ROOT; };
 		9604B925D32EE39065747725 /* ofxBaseGui.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxBaseGui.cpp; path = ../../../addons/ofxGui/src/ofxBaseGui.cpp; sourceTree = SOURCE_ROOT; };
 		964379A5CD247C4A4265A070 /* MultiLadder4.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = MultiLadder4.cpp; path = ../../../addons/ofxPDSP/src/DSP/filters/MultiLadder4.cpp; sourceTree = SOURCE_ROOT; };
+		96C80C87E47B99D75FE93EB6 /* Interval.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Interval.cpp; path = src/MusicTheory/Interval.cpp; sourceTree = SOURCE_ROOT; };
 		978E42BE9DA57B74904869C0 /* kernel_BmulS.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = kernel_BmulS.h; path = ../../../addons/ofxPDSP/src/math/simd/kernels/kernel_BmulS.h; sourceTree = SOURCE_ROOT; };
 		98B916CABFC10AC9836EB352 /* cast.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cast.h; path = ../../../addons/ofxPoco/libs/openssl/include/openssl/cast.h; sourceTree = SOURCE_ROOT; };
 		9912D9E928A8FD3A49B77E69 /* SoftClip.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = SoftClip.cpp; path = ../../../addons/ofxPDSP/src/DSP/signal/SoftClip.cpp; sourceTree = SOURCE_ROOT; };
@@ -574,6 +593,7 @@
 		9A89E53638FC897812CA4424 /* PatchNode.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = PatchNode.cpp; path = ../../../addons/ofxPDSP/src/DSP/core/PatchNode.cpp; sourceTree = SOURCE_ROOT; };
 		9BF3AA0D4FAA89D0F8A0E545 /* OscReceivedElements.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = OscReceivedElements.cpp; path = ../../../addons/ofxOsc/libs/oscpack/src/osc/OscReceivedElements.cpp; sourceTree = SOURCE_ROOT; };
 		9C84D383466B8E2F4397BEB9 /* WaveTable.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = WaveTable.cpp; path = ../../../addons/ofxPDSP/src/DSP/oscillators/wavetable/WaveTable.cpp; sourceTree = SOURCE_ROOT; };
+		9C935F35C96A7825778AF8B6 /* PolySynth.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = PolySynth.cpp; path = src/Synths/PolySynth.cpp; sourceTree = SOURCE_ROOT; };
 		9D3B892575FC9F76B978DA20 /* Sampler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Sampler.h; path = ../../../addons/ofxPDSP/src/DSP/samplers/Sampler.h; sourceTree = SOURCE_ROOT; };
 		9D56F61F7C9896086086D476 /* SequencerGateOutput.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = SequencerGateOutput.h; path = ../../../addons/ofxPDSP/src/DSP/control/SequencerGateOutput.h; sourceTree = SOURCE_ROOT; };
 		9D907A98D6FF2E95AE4FCFBE /* opensslv.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = opensslv.h; path = ../../../addons/ofxPoco/libs/openssl/include/openssl/opensslv.h; sourceTree = SOURCE_ROOT; };
@@ -603,7 +623,6 @@
 		A8CCCFE3018D73B7B0DBBAB7 /* kernel_expB.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = kernel_expB.h; path = ../../../addons/ofxPDSP/src/math/simd/kernels/kernel_expB.h; sourceTree = SOURCE_ROOT; };
 		A8D0A1BE6658247EE6136A7D /* Saturator2.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Saturator2.cpp; path = ../../../addons/ofxPDSP/src/DSP/signal/Saturator2.cpp; sourceTree = SOURCE_ROOT; };
 		A937731265782800A8359098 /* ofxMidiClock.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxMidiClock.cpp; path = ../../../addons/ofxMidi/src/ofxMidiClock.cpp; sourceTree = SOURCE_ROOT; };
-		A9479267EDB82DE692B18123 /* Interval.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Interval.h; path = ../../../addons/ofxMusicTheory/src/harmony/Interval.h; sourceTree = SOURCE_ROOT; };
 		A9AA9F290280E04944C1CEEE /* srp.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = srp.h; path = ../../../addons/ofxPoco/libs/openssl/include/openssl/srp.h; sourceTree = SOURCE_ROOT; };
 		A9EA1F42FE55F7958EA1E688 /* ClockedLFO.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ClockedLFO.h; path = ../../../addons/ofxPDSP/src/modules/oscillators/ClockedLFO.h; sourceTree = SOURCE_ROOT; };
 		AA136346D730CE2FC0EC85CD /* e_os2.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = e_os2.h; path = ../../../addons/ofxPoco/libs/openssl/include/openssl/e_os2.h; sourceTree = SOURCE_ROOT; };
@@ -614,6 +633,7 @@
 		ACA9307B015083D1DF8E61E3 /* SRDelay.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = SRDelay.cpp; path = ../../../addons/ofxPDSP/src/DSP/delays/SRDelay.cpp; sourceTree = SOURCE_ROOT; };
 		ACC2A97FCD7E70593968CDA9 /* BiquadBase.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = BiquadBase.cpp; path = ../../../addons/ofxPDSP/src/DSP/filters/biquads/BiquadBase.cpp; sourceTree = SOURCE_ROOT; };
 		AD71D70CF46063698DB76AF1 /* SequencerProcessor.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = SequencerProcessor.cpp; path = ../../../addons/ofxPDSP/src/sequencer/SequencerProcessor.cpp; sourceTree = SOURCE_ROOT; };
+		ADC91F7C113E570B72A2B560 /* Scale.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Scale.hpp; path = src/MusicTheory/Scale.hpp; sourceTree = SOURCE_ROOT; };
 		ADD194746185E2DA11468377 /* IpEndpointName.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = IpEndpointName.cpp; path = ../../../addons/ofxOsc/libs/oscpack/src/ip/IpEndpointName.cpp; sourceTree = SOURCE_ROOT; };
 		AE335EB4709BFD4671EEAC84 /* MessageMappingOscPacketListener.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = MessageMappingOscPacketListener.h; path = ../../../addons/ofxOsc/libs/oscpack/src/osc/MessageMappingOscPacketListener.h; sourceTree = SOURCE_ROOT; };
 		AE68B54581BE4A1DAE853180 /* ofxInputField.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxInputField.h; path = ../../../addons/ofxGui/src/ofxInputField.h; sourceTree = SOURCE_ROOT; };
@@ -633,6 +653,7 @@
 		B3FD7D180D9C1E2730296920 /* pdspFunctions.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = pdspFunctions.h; path = ../../../addons/ofxPDSP/src/DSP/pdspFunctions.h; sourceTree = SOURCE_ROOT; };
 		B400245D4803F539B9D949BD /* Engine.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Engine.cpp; path = ../../../addons/ofxPDSP/src/ofx/Engine.cpp; sourceTree = SOURCE_ROOT; };
 		B400F6AD48F06E02F44FD05F /* safestack.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = safestack.h; path = ../../../addons/ofxPoco/libs/openssl/include/openssl/safestack.h; sourceTree = SOURCE_ROOT; };
+		B4613DBB0D1143D3A4FE4B19 /* SequenceEvent.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = SequenceEvent.hpp; path = src/SequenceEvent.hpp; sourceTree = SOURCE_ROOT; };
 		B4F3FCB1CEE7B5D701F79122 /* crypto.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = crypto.h; path = ../../../addons/ofxPoco/libs/openssl/include/openssl/crypto.h; sourceTree = SOURCE_ROOT; };
 		B527B3A6FFA7E3F3BB9A9F51 /* TriggeredRandom.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = TriggeredRandom.cpp; path = ../../../addons/ofxPDSP/src/DSP/random/TriggeredRandom.cpp; sourceTree = SOURCE_ROOT; };
 		B55B06F96FE56F110DD1131E /* ParameterGain.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ParameterGain.h; path = ../../../addons/ofxPDSP/src/ofx/ParameterGain.h; sourceTree = SOURCE_ROOT; };
@@ -649,6 +670,7 @@
 		B9D6D82F2FDF7E05D875CCFE /* ExternalInput.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ExternalInput.cpp; path = ../../../addons/ofxPDSP/src/DSP/core/ExternalInput.cpp; sourceTree = SOURCE_ROOT; };
 		BA1E60F60F359C1265A9A170 /* sanity_check.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = sanity_check.cpp; path = ../../../addons/ofxPDSP/src/math/dsphelpers/sanity_check.cpp; sourceTree = SOURCE_ROOT; };
 		BA274EC7A169D538BD43A5D8 /* ofxGuiUtils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxGuiUtils.h; path = ../../../addons/ofxGui/src/ofxGuiUtils.h; sourceTree = SOURCE_ROOT; };
+		BA51CC4BE8F62E5A2D906BF5 /* Sequence.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Sequence.cpp; path = src/Sequence.cpp; sourceTree = SOURCE_ROOT; };
 		BAE582C4088C98A1A319041E /* Processor.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Processor.cpp; path = ../../../addons/ofxPDSP/src/DSP/core/Processor.cpp; sourceTree = SOURCE_ROOT; };
 		BB9A69A27F885429FAC3AF90 /* GrainTable.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = GrainTable.cpp; path = ../../../addons/ofxPDSP/src/DSP/samplers/grain/GrainTable.cpp; sourceTree = SOURCE_ROOT; };
 		BBFBCD49B68223A32AD83DBF /* OscInput.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = OscInput.h; path = ../../../addons/ofxPDSP/src/ofx/OscInput.h; sourceTree = SOURCE_ROOT; };
@@ -660,6 +682,7 @@
 		BE8FBA723E5EF2C9AB7A2F2D /* VAOscillator.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = VAOscillator.cpp; path = ../../../addons/ofxPDSP/src/modules/oscillators/VAOscillator.cpp; sourceTree = SOURCE_ROOT; };
 		BE9164C25831DDA72F58FDFF /* PMPhasor.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = PMPhasor.cpp; path = ../../../addons/ofxPDSP/src/DSP/oscillators/phasors/PMPhasor.cpp; sourceTree = SOURCE_ROOT; };
 		BEA7B74DF5C793F32142494A /* SampleBuffer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = SampleBuffer.cpp; path = ../../../addons/ofxPDSP/src/DSP/samplers/SampleBuffer.cpp; sourceTree = SOURCE_ROOT; };
+		BEB27ED03FC629B0FEAB8AD8 /* SoundEngine.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = SoundEngine.cpp; path = src/SoundEngine.cpp; sourceTree = SOURCE_ROOT; };
 		BEBE41C3671C9E523F9B66B3 /* BiquadBPF2.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = BiquadBPF2.cpp; path = ../../../addons/ofxPDSP/src/DSP/filters/biquads/BiquadBPF2.cpp; sourceTree = SOURCE_ROOT; };
 		BF9D346CF92BA2D024374E4B /* PitchToFreq.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = PitchToFreq.cpp; path = ../../../addons/ofxPDSP/src/DSP/utility/PitchToFreq.cpp; sourceTree = SOURCE_ROOT; };
 		C01048EA35B6E649E65358A3 /* header.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = header.h; path = ../../../addons/ofxPDSP/src/DSP/header.h; sourceTree = SOURCE_ROOT; };
@@ -670,6 +693,7 @@
 		C0E7EDA67EDF213FC0E83D17 /* ofxMidiMessage.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxMidiMessage.cpp; path = ../../../addons/ofxMidi/src/ofxMidiMessage.cpp; sourceTree = SOURCE_ROOT; };
 		C1492CC11013C145F54F3F64 /* floor.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = floor.h; path = ../../../addons/ofxPDSP/src/math/simd/functions/floor.h; sourceTree = SOURCE_ROOT; };
 		C174503B37482BF8A50A6D38 /* ExternalInput.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ExternalInput.h; path = ../../../addons/ofxPDSP/src/DSP/core/ExternalInput.h; sourceTree = SOURCE_ROOT; };
+		C22C6DB76E28E82935AD0646 /* ofxBpm.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxBpm.cpp; path = src/ofxBpm.cpp; sourceTree = SOURCE_ROOT; };
 		C25591BA9EC00A6DF31F35C0 /* OscOutput.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = OscOutput.cpp; path = ../../../addons/ofxPDSP/src/ofx/OscOutput.cpp; sourceTree = SOURCE_ROOT; };
 		C2FAC65C491D4231379F3298 /* ofxOscReceiver.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxOscReceiver.cpp; path = ../../../addons/ofxOsc/src/ofxOscReceiver.cpp; sourceTree = SOURCE_ROOT; };
 		C373CBF6422737D147BA8B70 /* objects.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = objects.h; path = ../../../addons/ofxPoco/libs/openssl/include/openssl/objects.h; sourceTree = SOURCE_ROOT; };
@@ -701,6 +725,7 @@
 		CD75E744C1956958963B8C72 /* BLEPBased.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = BLEPBased.cpp; path = ../../../addons/ofxPDSP/src/DSP/oscillators/antialiased/BLEP/BLEPBased.cpp; sourceTree = SOURCE_ROOT; };
 		CE1297E337DC3BC12E953DB3 /* ParameterAmp.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ParameterAmp.h; path = ../../../addons/ofxPDSP/src/ofx/ParameterAmp.h; sourceTree = SOURCE_ROOT; };
 		CE1BEB69A673D5C62EDEE3D7 /* TableOscillator.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = TableOscillator.h; path = ../../../addons/ofxPDSP/src/modules/oscillators/TableOscillator.h; sourceTree = SOURCE_ROOT; };
+		CEBF0560E3EEE283DCB0FD2E /* ChordsTrack.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ChordsTrack.hpp; path = src/Tracks/ChordsTrack.hpp; sourceTree = SOURCE_ROOT; };
 		CFDEFB2DD9836516E63DA4F5 /* kernel_absB.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = kernel_absB.h; path = ../../../addons/ofxPDSP/src/math/simd/kernels/kernel_absB.h; sourceTree = SOURCE_ROOT; };
 		CFF8E4F819989448F699AEBA /* phazorShifter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = phazorShifter.h; path = ../../../addons/ofxPDSP/src/math/dsphelpers/phazorShifter.h; sourceTree = SOURCE_ROOT; };
 		D072DDE24CC662AF5EE89B8A /* VAOscillator.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = VAOscillator.h; path = ../../../addons/ofxPDSP/src/modules/oscillators/VAOscillator.h; sourceTree = SOURCE_ROOT; };
@@ -709,21 +734,6 @@
 		D26D43B511DDC3177CE8FEB6 /* simd_wrapper.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = simd_wrapper.h; path = ../../../addons/ofxPDSP/src/math/simd/functions/simd_wrapper.h; sourceTree = SOURCE_ROOT; };
 		D2BEAB2918D11199BC143167 /* MidiIn.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = MidiIn.h; path = ../../../addons/ofxPDSP/src/ofx/MidiIn.h; sourceTree = SOURCE_ROOT; };
 		D315839A1D24D10046025C0C /* asn1_mac.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = asn1_mac.h; path = ../../../addons/ofxPoco/libs/openssl/include/openssl/asn1_mac.h; sourceTree = SOURCE_ROOT; };
-		D34189142BBDC6E300ED4131 /* synth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = synth.h; sourceTree = "<group>"; };
-		D34189182BBF1DCC00ED4131 /* PolySynth.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PolySynth.cpp; sourceTree = "<group>"; };
-		D34189192BBF1DCC00ED4131 /* PolySynth.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PolySynth.hpp; sourceTree = "<group>"; };
-		D341891B2BC974A600ED4131 /* GuiApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GuiApp.cpp; sourceTree = "<group>"; };
-		D341891C2BC974A600ED4131 /* GuiApp.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GuiApp.hpp; sourceTree = "<group>"; };
-		D341891E2BC9781200ED4131 /* ChordsEngine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ChordsEngine.cpp; sourceTree = "<group>"; };
-		D341891F2BC9781200ED4131 /* ChordsEngine.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ChordsEngine.hpp; sourceTree = "<group>"; };
-		D34189212BC9781E00ED4131 /* SoundEngine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SoundEngine.cpp; sourceTree = "<group>"; };
-		D34189222BC9781E00ED4131 /* SoundEngine.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SoundEngine.hpp; sourceTree = "<group>"; };
-		D34189242BE3ABB700ED4131 /* KeyboardReader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = KeyboardReader.cpp; sourceTree = "<group>"; };
-		D34189252BE3ABB700ED4131 /* KeyboardReader.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = KeyboardReader.hpp; sourceTree = "<group>"; };
-		D34189272BE7A89400ED4131 /* Sequence.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Sequence.cpp; sourceTree = "<group>"; };
-		D34189282BE7A89400ED4131 /* Sequence.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Sequence.hpp; sourceTree = "<group>"; };
-		D341892A2BE7CD8F00ED4131 /* SequenceEvent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SequenceEvent.cpp; sourceTree = "<group>"; };
-		D341892B2BE7CD8F00ED4131 /* SequenceEvent.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SequenceEvent.hpp; sourceTree = "<group>"; };
 		D38ABA0A14979D7E22C5A5FE /* Clockable.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Clockable.h; path = ../../../addons/ofxPDSP/src/messages/Clockable.h; sourceTree = SOURCE_ROOT; };
 		D3B221C0934A3F7EC9530473 /* FDLConvolver.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = FDLConvolver.h; path = ../../../addons/ofxPDSP/src/DSP/convolution/FDLConvolver.h; sourceTree = SOURCE_ROOT; };
 		D40509515EE1704AEC6A16D1 /* OnePole.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = OnePole.cpp; path = ../../../addons/ofxPDSP/src/DSP/filters/OnePole.cpp; sourceTree = SOURCE_ROOT; };
@@ -734,13 +744,11 @@
 		D6B83CB1D896D3C7EE4CEBBF /* Switch.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Switch.cpp; path = ../../../addons/ofxPDSP/src/DSP/core/Switch.cpp; sourceTree = SOURCE_ROOT; };
 		D7D04840334F3A7A5E0022ED /* obj_mac.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = obj_mac.h; path = ../../../addons/ofxPoco/libs/openssl/include/openssl/obj_mac.h; sourceTree = SOURCE_ROOT; };
 		D7EAE8CB966F4DEF06346694 /* OnePole.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = OnePole.h; path = ../../../addons/ofxPDSP/src/DSP/filters/OnePole.h; sourceTree = SOURCE_ROOT; };
-		D869021EA2983D5D253DB664 /* Note.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Note.h; path = ../../../addons/ofxMusicTheory/src/harmony/Note.h; sourceTree = SOURCE_ROOT; };
 		D935D3764A5D1137CAB4CEC5 /* ofxPDSPLegacy.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxPDSPLegacy.h; path = ../../../addons/ofxPDSP/src/ofxPDSPLegacy.h; sourceTree = SOURCE_ROOT; };
 		D9A29C9DD4DFDF38F00ECF27 /* pem.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = pem.h; path = ../../../addons/ofxPoco/libs/openssl/include/openssl/pem.h; sourceTree = SOURCE_ROOT; };
 		D9BFFBBF4CC43DEE890B3C3E /* OscTypes.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = OscTypes.cpp; path = ../../../addons/ofxOsc/libs/oscpack/src/osc/OscTypes.cpp; sourceTree = SOURCE_ROOT; };
 		DB8E8A3E7DBD341637059A64 /* dh.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = dh.h; path = ../../../addons/ofxPoco/libs/openssl/include/openssl/dh.h; sourceTree = SOURCE_ROOT; };
 		DC7D4B9436A6A6651F78D9B2 /* DataOscillator.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = DataOscillator.h; path = ../../../addons/ofxPDSP/src/modules/oscillators/DataOscillator.h; sourceTree = SOURCE_ROOT; };
-		DC81C659CECA1D06583B1E45 /* ofxMusicTheory.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxMusicTheory.h; path = ../../../addons/ofxMusicTheory/src/ofxMusicTheory.h; sourceTree = SOURCE_ROOT; };
 		DCAF8A445B0A0026238CB49B /* smooth.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = smooth.h; path = ../../../addons/ofxPDSP/src/math/interpolation/smooth.h; sourceTree = SOURCE_ROOT; };
 		DE38BE8CA380A05E2DCE08AD /* LFO.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = LFO.h; path = ../../../addons/ofxPDSP/src/modules/oscillators/LFO.h; sourceTree = SOURCE_ROOT; };
 		DE72DC98030465018D130E67 /* md4.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = md4.h; path = ../../../addons/ofxPoco/libs/openssl/include/openssl/md4.h; sourceTree = SOURCE_ROOT; };
@@ -971,15 +979,16 @@
 		F4F5B6B8BA2BD52C646ED908 /* OscException.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = OscException.h; path = ../../../addons/ofxOsc/libs/oscpack/src/osc/OscException.h; sourceTree = SOURCE_ROOT; };
 		F4FB83DC67D1DC6466A86CA7 /* ClockedPhasor.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ClockedPhasor.cpp; path = ../../../addons/ofxPDSP/src/DSP/oscillators/phasors/ClockedPhasor.cpp; sourceTree = SOURCE_ROOT; };
 		F634AA6CA2E3C60F3B87B59A /* ofxRtMidiIn.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxRtMidiIn.cpp; path = ../../../addons/ofxMidi/src/desktop/ofxRtMidiIn.cpp; sourceTree = SOURCE_ROOT; };
+		F766C3DFF737D87C22C3A554 /* PolySynth.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = PolySynth.hpp; path = src/Synths/PolySynth.hpp; sourceTree = SOURCE_ROOT; };
 		F7C36740B8008A6FAB515B67 /* resamplers.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = resamplers.h; path = ../../../addons/ofxPDSP/src/DSP/resamplers/resamplers.h; sourceTree = SOURCE_ROOT; };
 		F7CF9EF7BFFD9F0639DB0A24 /* DataOsc.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DataOsc.cpp; path = ../../../addons/ofxPDSP/src/DSP/oscillators/wavetable/DataOsc.cpp; sourceTree = SOURCE_ROOT; };
 		F7FBC56859535E597B24BB91 /* NetworkingUtils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = NetworkingUtils.h; path = ../../../addons/ofxOsc/libs/oscpack/src/ip/NetworkingUtils.h; sourceTree = SOURCE_ROOT; };
 		F83D272960651E8F39E6825F /* Oscillator.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Oscillator.h; path = ../../../addons/ofxPDSP/src/DSP/oscillators/base/Oscillator.h; sourceTree = SOURCE_ROOT; };
+		F88636C4EFBB70F4A94794DC /* GuiApp.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GuiApp.hpp; path = src/GuiApp.hpp; sourceTree = SOURCE_ROOT; };
 		F8DD5BDF132C72BB7D33F5B7 /* SampleBuffer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = SampleBuffer.h; path = ../../../addons/ofxPDSP/src/DSP/samplers/SampleBuffer.h; sourceTree = SOURCE_ROOT; };
 		F92EEC74EAC7FE3350BCC6B0 /* AAPeakEQ.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = AAPeakEQ.cpp; path = ../../../addons/ofxPDSP/src/modules/equalizers/AAPeakEQ.cpp; sourceTree = SOURCE_ROOT; };
 		FA4CBA949E00D1145A1F86CD /* SequencerBridge.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = SequencerBridge.cpp; path = ../../../addons/ofxPDSP/src/DSP/control/SequencerBridge.cpp; sourceTree = SOURCE_ROOT; };
 		FA6F77322B6FBAC4C47CC0C9 /* OscillatorVariShape.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = OscillatorVariShape.h; path = ../../../addons/ofxPDSP/src/DSP/oscillators/base/OscillatorVariShape.h; sourceTree = SOURCE_ROOT; };
-		FAA9C26581991687ABBF058B /* Progression.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Progression.h; path = ../../../addons/ofxMusicTheory/src/harmony/Progression.h; sourceTree = SOURCE_ROOT; };
 		FB8C8F68FB0CE689A35CE064 /* GainComputer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainComputer.h; path = ../../../addons/ofxPDSP/src/DSP/dynamics/GainComputer.h; sourceTree = SOURCE_ROOT; };
 		FBEC268A8CD5C5095C3EFC5A /* header.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = header.h; path = ../../../addons/ofxPDSP/src/math/simd/header.h; sourceTree = SOURCE_ROOT; };
 		FBEDBEAE6A7FD32A00F356EC /* kernel_minBS.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = kernel_minBS.h; path = ../../../addons/ofxPDSP/src/math/simd/kernels/kernel_minBS.h; sourceTree = SOURCE_ROOT; };
@@ -1031,13 +1040,13 @@
 			name = random;
 			sourceTree = "<group>";
 		};
-		0858DEE41CFA227D89FB555D /* src */ = {
+		0A809F52909EDEDFE6B39A7B /* Synths */ = {
 			isa = PBXGroup;
 			children = (
-				EEEAF3130ECC26DFFDBA638F /* harmony */,
-				DC81C659CECA1D06583B1E45 /* ofxMusicTheory.h */,
+				F766C3DFF737D87C22C3A554 /* PolySynth.hpp */,
+				9C935F35C96A7825778AF8B6 /* PolySynth.cpp */,
 			);
-			name = src;
+			name = Synths;
 			sourceTree = "<group>";
 		};
 		0C99D3CA9493FA4377835FE0 /* convolution */ = {
@@ -1141,14 +1150,6 @@
 				36D7EC7EF50E326EAC88A0AD /* frameworks */,
 			);
 			name = ofxMidi;
-			sourceTree = "<group>";
-		};
-		255BC6323E66FFFDC0A79A17 /* ofxMusicTheory */ = {
-			isa = PBXGroup;
-			children = (
-				0858DEE41CFA227D89FB555D /* src */,
-			);
-			name = ofxMusicTheory;
 			sourceTree = "<group>";
 		};
 		2774B7872EE0061F9935E752 /* equalizers */ = {
@@ -1744,6 +1745,17 @@
 			name = trig;
 			sourceTree = "<group>";
 		};
+		927E90AA17FE2975573F20DE /* Tracks */ = {
+			isa = PBXGroup;
+			children = (
+				64E68A463EBDA7701662C96E /* ChordsTrack.cpp */,
+				1EAA550E2689163331F57628 /* Track.hpp */,
+				CEBF0560E3EEE283DCB0FD2E /* ChordsTrack.hpp */,
+				91D83EAFD87A64877C1192AD /* Track.cpp */,
+			);
+			name = Tracks;
+			sourceTree = "<group>";
+		};
 		93731D607D297CF520264178 /* BLEP */ = {
 			isa = PBXGroup;
 			children = (
@@ -1949,7 +1961,6 @@
 				D8D8E0F43C631167E024126A /* ofxAudioFile */,
 				480A780D8D0308AE4A368801 /* ofxGui */,
 				2413C01760B1811BED0F502D /* ofxMidi */,
-				255BC6323E66FFFDC0A79A17 /* ofxMusicTheory */,
 				E6053AB7FEC63D5F83825B88 /* ofxOsc */,
 				591F90EFF8543261877E5B03 /* ofxPDSP */,
 				0117D94CE0C695E5E5482BEC /* ofxPoco */,
@@ -1997,6 +2008,19 @@
 				46064BED66FACE3C717D6E34 /* grain */,
 			);
 			name = samplers;
+			sourceTree = "<group>";
+		};
+		CEC8965B2666C3A936BEA702 /* MusicTheory */ = {
+			isa = PBXGroup;
+			children = (
+				ADC91F7C113E570B72A2B560 /* Scale.hpp */,
+				1D46E20ED4E140373378280F /* Interval.hpp */,
+				54CE657ECF96EDC567449C20 /* Note.hpp */,
+				2F7CA887282D928657E4231F /* Scale.cpp */,
+				96C80C87E47B99D75FE93EB6 /* Interval.cpp */,
+				03E829676ECC060FBF339568 /* Note.cpp */,
+			);
+			name = MusicTheory;
 			sourceTree = "<group>";
 		};
 		CFE336F7318DC3F7EC504827 /* interpolation */ = {
@@ -2398,21 +2422,23 @@
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
-				D34189142BBDC6E300ED4131 /* synth.h */,
-				D34189182BBF1DCC00ED4131 /* PolySynth.cpp */,
-				D34189192BBF1DCC00ED4131 /* PolySynth.hpp */,
-				D341891B2BC974A600ED4131 /* GuiApp.cpp */,
-				D341891C2BC974A600ED4131 /* GuiApp.hpp */,
-				D341891E2BC9781200ED4131 /* ChordsEngine.cpp */,
-				D341891F2BC9781200ED4131 /* ChordsEngine.hpp */,
-				D34189212BC9781E00ED4131 /* SoundEngine.cpp */,
-				D34189222BC9781E00ED4131 /* SoundEngine.hpp */,
-				D34189242BE3ABB700ED4131 /* KeyboardReader.cpp */,
-				D34189252BE3ABB700ED4131 /* KeyboardReader.hpp */,
-				D34189272BE7A89400ED4131 /* Sequence.cpp */,
-				D34189282BE7A89400ED4131 /* Sequence.hpp */,
-				D341892A2BE7CD8F00ED4131 /* SequenceEvent.cpp */,
-				D341892B2BE7CD8F00ED4131 /* SequenceEvent.hpp */,
+				C22C6DB76E28E82935AD0646 /* ofxBpm.cpp */,
+				419E93042383B8E4C359571B /* ChordsEngine.cpp */,
+				CEC8965B2666C3A936BEA702 /* MusicTheory */,
+				2ABB5F16005C754760AE17E6 /* KeyboardReader.cpp */,
+				729D3C3D126A7D627AAAD9DE /* Sequence.hpp */,
+				3797529AE5E9DE225B0A7BDF /* ofxBpm.h */,
+				0A809F52909EDEDFE6B39A7B /* Synths */,
+				32858E9AA3F299C01D10DE0D /* GuiApp.cpp */,
+				F88636C4EFBB70F4A94794DC /* GuiApp.hpp */,
+				927E90AA17FE2975573F20DE /* Tracks */,
+				BEB27ED03FC629B0FEAB8AD8 /* SoundEngine.cpp */,
+				BA51CC4BE8F62E5A2D906BF5 /* Sequence.cpp */,
+				3702D3B77C1CF78F8EC66E92 /* SoundEngine.hpp */,
+				38DCB86E1E4D72C48BC7A6AB /* ChordsEngine.hpp */,
+				B4613DBB0D1143D3A4FE4B19 /* SequenceEvent.hpp */,
+				40976127BE86271139459D4C /* SequenceEvent.cpp */,
+				5DC895B70A68089B50CB5D3F /* KeyboardReader.hpp */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -2506,20 +2532,6 @@
 				2B3413188866E4CB280223A9 /* ofxPDSPFunctions.h */,
 			);
 			name = ofx;
-			sourceTree = "<group>";
-		};
-		EEEAF3130ECC26DFFDBA638F /* harmony */ = {
-			isa = PBXGroup;
-			children = (
-				575C14A9D30AF033C1856702 /* Chord.h */,
-				668DED1C0E25E4BC626DFCE1 /* Diatonic.h */,
-				A9479267EDB82DE692B18123 /* Interval.h */,
-				4B3645A4BC245BF6E6D29835 /* Intervals.h */,
-				D869021EA2983D5D253DB664 /* Note.h */,
-				FAA9C26581991687ABBF058B /* Progression.h */,
-				36385A577753C8CA301DE4F5 /* Scale.h */,
-			);
-			name = harmony;
 			sourceTree = "<group>";
 		};
 		F84A7F58065629BE2169BF76 /* helper */ = {
@@ -2691,10 +2703,22 @@
 			files = (
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
+				4A42FD352C3E7A49BE404214 /* ofxBpm.cpp in Sources */,
+				3C0C363542B5AD432CCCE023 /* ChordsEngine.cpp in Sources */,
+				5C805237A3A6F90CA13AF770 /* Scale.cpp in Sources */,
+				3B902835281B63CA67DA3054 /* Interval.cpp in Sources */,
+				2D3435815F19F2FA66C1CA47 /* Note.cpp in Sources */,
+				CD26BE12DEF753E796361BA6 /* SequenceEvent.cpp in Sources */,
+				3F369115C4434D1170F95DD0 /* KeyboardReader.cpp in Sources */,
+				4C935B82B4A1EE80BC80BFBF /* PolySynth.cpp in Sources */,
+				554279AC74A1EE2E15BED19B /* GuiApp.cpp in Sources */,
+				5731E689AA1444840BB8875D /* ChordsTrack.cpp in Sources */,
+				A8B58BA4BD98D80632E132A6 /* Track.cpp in Sources */,
+				FF6DC6203B25BED950CD0313 /* SoundEngine.cpp in Sources */,
+				DAA6EB8EF64DD54A819BFA3F /* Sequence.cpp in Sources */,
 				55169838B1C1CE8A3035E2D8 /* ofxAudioFile.cpp in Sources */,
 				856AA354D08AB4B323081444 /* ofxBaseGui.cpp in Sources */,
 				5CBB2AB3A60F65431D7B555D /* ofxButton.cpp in Sources */,
-				D341892C2BE7CD8F00ED4131 /* SequenceEvent.cpp in Sources */,
 				853E0BA2F448076739446874 /* ofxColorPicker.cpp in Sources */,
 				B266578FC55D23BFEBC042E7 /* ofxGuiGroup.cpp in Sources */,
 				852E0891794923EE7583C621 /* ofxInputField.cpp in Sources */,
@@ -2711,7 +2735,6 @@
 				881AF887EC2124F4105DE9E1 /* ofxMidiClock.cpp in Sources */,
 				0BFC9C20FD7E3C8D5873AA97 /* ofxMidiIn.cpp in Sources */,
 				C6FE64F74F1EA1D98C8F9847 /* ofxMidiMessage.cpp in Sources */,
-				D34189232BC9781E00ED4131 /* SoundEngine.cpp in Sources */,
 				83D9F930112E0944444124EE /* ofxMidiOut.cpp in Sources */,
 				1030C647FD06E4D3E054F65D /* ofxMidiTimecode.cpp in Sources */,
 				ADE367465D2A8EBAD4C7A8D9 /* IpEndpointName.cpp in Sources */,
@@ -2757,14 +2780,11 @@
 				44EF20107D7A5BAB7284518C /* RMSDetector.cpp in Sources */,
 				7151C2CF60A59CD0E8125DCB /* SquarePeakDetector.cpp in Sources */,
 				DF440883BDCC5F925E94575B /* ADSR.cpp in Sources */,
-				D341891A2BBF1DCC00ED4131 /* PolySynth.cpp in Sources */,
 				63A7C4F76051FB7FC0E9FF96 /* AHR.cpp in Sources */,
-				D34189292BE7A89400ED4131 /* Sequence.cpp in Sources */,
 				BA06A08DCEC93A670A8A5401 /* EnvelopeStage.cpp in Sources */,
 				C47AE9C64637E21C8B6EAEB6 /* APF1.cpp in Sources */,
 				901C52413B918554601C4CFD /* APF4.cpp in Sources */,
 				F4F6C433B39BA884CC634398 /* MultiLadder4.cpp in Sources */,
-				D341891D2BC974A600ED4131 /* GuiApp.cpp in Sources */,
 				A05990E6E8F28A0C18A0D498 /* OnePole.cpp in Sources */,
 				3F6F4F896FC7FD9D3BA7C479 /* SVF2.cpp in Sources */,
 				A16C57EAC4805A0B459F9AFE /* BiquadAPF2.cpp in Sources */,
@@ -2858,12 +2878,10 @@
 				17F813B8CBF2D916787C5DC6 /* TableOscillator.cpp in Sources */,
 				2F87412E72C3145BEE073BD1 /* VAOscillator.cpp in Sources */,
 				A982ADA9C3A8432A4B3C21C9 /* BasiVerb.cpp in Sources */,
-				D34189262BE3ABB700ED4131 /* KeyboardReader.cpp in Sources */,
 				6169A0922A8C7E6E0AB71197 /* IRVerb.cpp in Sources */,
 				7FA4C904676B229545682F3A /* GrainCloud.cpp in Sources */,
 				7C27448C4E7C343342F98444 /* TriggeredGrain.cpp in Sources */,
 				16BC77AD81BA5DB5BA779DF0 /* LinearCrossfader.cpp in Sources */,
-				D34189202BC9781200ED4131 /* ChordsEngine.cpp in Sources */,
 				D5BBE6B38445B8231F47E133 /* Panner.cpp in Sources */,
 				5E1E6637759729F028626C9C /* BitNoise.cpp in Sources */,
 				F03E6B5F99088C1E31A16BB8 /* ComputerKeyboard.cpp in Sources */,
@@ -2924,6 +2942,9 @@
 					"$(OF_CORE_HEADERS)",
 					src,
 					src,
+					src/MusicTheory,
+					src/Synths,
+					src/Tracks,
 					../../../addons/ofxAudioFile/libs,
 					../../../addons/ofxAudioFile/src,
 					../../../addons/ofxGui/src,
@@ -2933,8 +2954,6 @@
 					../../../addons/ofxMidi/src,
 					../../../addons/ofxMidi/src/desktop,
 					../../../addons/ofxMidi/src/ios,
-					../../../addons/ofxMusicTheory/src,
-					../../../addons/ofxMusicTheory/src/harmony,
 					../../../addons/ofxOsc/libs,
 					../../../addons/ofxOsc/libs/oscpack,
 					../../../addons/ofxOsc/libs/oscpack/src,
@@ -3026,6 +3045,9 @@
 					"$(OF_CORE_HEADERS)",
 					src,
 					src,
+					src/MusicTheory,
+					src/Synths,
+					src/Tracks,
 					../../../addons/ofxAudioFile/libs,
 					../../../addons/ofxAudioFile/src,
 					../../../addons/ofxGui/src,
@@ -3035,8 +3057,6 @@
 					../../../addons/ofxMidi/src,
 					../../../addons/ofxMidi/src/desktop,
 					../../../addons/ofxMidi/src/ios,
-					../../../addons/ofxMusicTheory/src,
-					../../../addons/ofxMusicTheory/src/harmony,
 					../../../addons/ofxOsc/libs,
 					../../../addons/ofxOsc/libs/oscpack,
 					../../../addons/ofxOsc/libs/oscpack/src,
@@ -3152,6 +3172,9 @@
 					"$(OF_CORE_HEADERS)",
 					src,
 					src,
+					src/MusicTheory,
+					src/Synths,
+					src/Tracks,
 					../../../addons/ofxAudioFile/libs,
 					../../../addons/ofxAudioFile/src,
 					../../../addons/ofxGui/src,
@@ -3161,8 +3184,6 @@
 					../../../addons/ofxMidi/src,
 					../../../addons/ofxMidi/src/desktop,
 					../../../addons/ofxMidi/src/ios,
-					../../../addons/ofxMusicTheory/src,
-					../../../addons/ofxMusicTheory/src/harmony,
 					../../../addons/ofxOsc/libs,
 					../../../addons/ofxOsc/libs/oscpack,
 					../../../addons/ofxOsc/libs/oscpack/src,
@@ -3262,6 +3283,9 @@
 					"$(OF_CORE_HEADERS)",
 					src,
 					src,
+					src/MusicTheory,
+					src/Synths,
+					src/Tracks,
 					../../../addons/ofxAudioFile/libs,
 					../../../addons/ofxAudioFile/src,
 					../../../addons/ofxGui/src,
@@ -3271,8 +3295,6 @@
 					../../../addons/ofxMidi/src,
 					../../../addons/ofxMidi/src/desktop,
 					../../../addons/ofxMidi/src/ios,
-					../../../addons/ofxMusicTheory/src,
-					../../../addons/ofxMusicTheory/src/harmony,
 					../../../addons/ofxOsc/libs,
 					../../../addons/ofxOsc/libs/oscpack,
 					../../../addons/ofxOsc/libs/oscpack/src,
@@ -3364,6 +3386,9 @@
 					"$(OF_CORE_HEADERS)",
 					src,
 					src,
+					src/MusicTheory,
+					src/Synths,
+					src/Tracks,
 					../../../addons/ofxAudioFile/libs,
 					../../../addons/ofxAudioFile/src,
 					../../../addons/ofxGui/src,
@@ -3373,8 +3398,6 @@
 					../../../addons/ofxMidi/src,
 					../../../addons/ofxMidi/src/desktop,
 					../../../addons/ofxMidi/src/ios,
-					../../../addons/ofxMusicTheory/src,
-					../../../addons/ofxMusicTheory/src/harmony,
 					../../../addons/ofxOsc/libs,
 					../../../addons/ofxOsc/libs/oscpack,
 					../../../addons/ofxOsc/libs/oscpack/src,
@@ -3482,6 +3505,9 @@
 					"$(OF_CORE_HEADERS)",
 					src,
 					src,
+					src/MusicTheory,
+					src/Synths,
+					src/Tracks,
 					../../../addons/ofxAudioFile/libs,
 					../../../addons/ofxAudioFile/src,
 					../../../addons/ofxGui/src,
@@ -3491,8 +3517,6 @@
 					../../../addons/ofxMidi/src,
 					../../../addons/ofxMidi/src/desktop,
 					../../../addons/ofxMidi/src/ios,
-					../../../addons/ofxMusicTheory/src,
-					../../../addons/ofxMusicTheory/src/harmony,
 					../../../addons/ofxOsc/libs,
 					../../../addons/ofxOsc/libs/oscpack,
 					../../../addons/ofxOsc/libs/oscpack/src,

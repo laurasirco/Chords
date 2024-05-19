@@ -13,9 +13,7 @@
 #include "ofxPDSP.h"
 #include "PolySynth.hpp"
 #include "Sequence.hpp"
-#include "ofxMusicTheory.h"
 
-using namespace MusicTheory;
 
 class SoundEngine {
     
@@ -32,10 +30,10 @@ public:
     
     void setup(int numVoices);
     
-    void triggerOn(deque<NotePtr> pitches, std::vector<int> activeVoices);
-    void triggerOff(deque<NotePtr> pitches, std::vector<int> activeVoices);
+    void triggerOn(std::vector<Note> pitches, std::vector<int> activeVoices);
+    void triggerOff(std::vector<Note> pitches, std::vector<int> activeVoices);
     
-    void addEventToSequence(bool trigger, deque<NotePtr> pitches, std::vector<int> activeVoices);
+    void addEventToSequence(bool trigger, std::vector<Note> pitches, std::vector<int> activeVoices);
 private:
     void triggerOnSelectedVoices(std::vector<int> selectedVoices);
 

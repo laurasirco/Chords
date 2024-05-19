@@ -33,7 +33,7 @@ void SoundEngine::setup(int numVoices){
     recording = true;
 }
 
-void SoundEngine::triggerOn(deque<NotePtr> pitches, std::vector<int> activeVoices){
+void SoundEngine::triggerOn(std::vector<Note> pitches, std::vector<int> activeVoices){
     if(!triggered){
         if(activeVoices.size() > 0){
             triggerOnSelectedVoices(activeVoices);
@@ -49,7 +49,7 @@ void SoundEngine::triggerOn(deque<NotePtr> pitches, std::vector<int> activeVoice
     }
 }
 
-void SoundEngine::triggerOff(deque<NotePtr> pitches, std::vector<int> activeVoices){
+void SoundEngine::triggerOff(std::vector<Note> pitches, std::vector<int> activeVoices){
     if(triggered){
         polysynth.triggerOffAllVoices();
         triggered = false;
@@ -65,10 +65,10 @@ void SoundEngine::triggerOnSelectedVoices(std::vector<int> selectedVoices){
     polysynth.triggerOnSelectedVoices(selectedVoices);
 }
 
-void SoundEngine::addEventToSequence(bool trigger, deque<NotePtr> pitches, std::vector<int> activeVoices){
+void SoundEngine::addEventToSequence(bool trigger, std::vector<Note> pitches, std::vector<int> activeVoices){
     
     if(activeVoices.size() > 0){
-        deque<NotePtr> selectedPitches;
+        std::vector<Note> selectedPitches;
         for(int i = 0; i < activeVoices.size(); i++)
             selectedPitches.push_back(pitches[i]);
         sequence.addEvent(engine.sequencer.meter_playhead(), trigger, selectedPitches);

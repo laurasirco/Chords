@@ -2,7 +2,6 @@
 
 #include "ofMain.h"
 #include "ofxGui.h"
-#include "ofxMusicTheory.h"
 #include "GuiApp.hpp"
 #include "SoundEngine.hpp"
 #include "ChordsEngine.hpp"
@@ -11,6 +10,7 @@
 class ofApp : public ofBaseApp{
     
 public:
+    ofApp();
     void setup();
     void update();
     void draw();

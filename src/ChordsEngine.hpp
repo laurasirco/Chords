@@ -9,36 +9,37 @@
 #define ChordsEngine_hpp
 
 #include <stdio.h>
-#include "ofxMusicTheory.h"
+#include "Note.hpp"
+#include "Scale.hpp"
 
-using namespace MusicTheory;
 
 class ChordsEngine {
   
 public:
-    
-    deque<NotePtr> currentChord;
-    std::vector<deque<NotePtr>> chords;
-    std::vector<ScalePtr>modes;
+    ChordsEngine();
+    std::vector<Note> currentChord;
+    std::vector<std::vector<Note>> chords;
+    std::vector<Scale> modes;
+    Note root;
     int currentMode;
     int numVoices;
     std::vector<int> activeVoices;
     
     void setup(int voices);
-    void setupChords(ScalePtr scale);
-    void setupModes(NotePtr root);
+    void setupChords(Scale mode);
+    void setupModes(Note root);
     void decreaseMode();
     void increaseMode();
     void increaseMode(int step);
     void setActiveVoices(std::vector<int> voices);
 
-    string currentChordName();
+    std::string currentChordName();
     std::vector<int> noteIndexesChordFromNoteNumber(int note);
 
     void setCurrentChord(int index, int voices);
 
 private:
-    deque<NotePtr> trimChordToVoices(deque<NotePtr> chord, int voices);
+    std::vector<Note> trimChordToVoices(std::vector<Note> chord, int voices);
 };
 
 #endif /* ChordsEngine_hpp */

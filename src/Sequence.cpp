@@ -7,7 +7,7 @@
 
 #include "Sequence.hpp"
 
-void Sequence::addEvent(double t, bool trigger, deque<NotePtr> pitch){
+void Sequence::addEvent(double t, bool trigger, std::vector<Note> pitch){
     
     SequenceEvent event;
     event.time = t;

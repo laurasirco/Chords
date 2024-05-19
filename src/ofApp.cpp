@@ -1,6 +1,8 @@
 #include "ofApp.h"
 
-using namespace MusicTheory;
+ofApp::ofApp(){
+    
+}
 
 //--------------------------------------------------------------
 void ofApp::setup(){
@@ -8,13 +10,12 @@ void ofApp::setup(){
     numVoices = 7;
     currentChordNumber = -1;
     
-    chordsEngine.setup(numVoices);
+//    chordsEngine.setup(numVoices);
     soundEngine.setup(numVoices);
         
     for(int i = 0; i < numVoices; i++){
-        chordsEngine.currentChord[i]->toInt() >> soundEngine.polysynth.voices[i].in("pitch");
+        soundEngine.polysynth.setPitchForVoice(chordsEngine.currentChord[i].getMIDINoteNumber(), i);
     }
-    
     
     // graphic setup---------------------------
     ofSetVerticalSync(true);
@@ -146,7 +147,7 @@ void ofApp::setCurrentChord(int chord){
     chordsEngine.setCurrentChord(chord, numVoices);
     
     for(int i = 0; i < numVoices; i++){
-        soundEngine.polysynth.setPitchForVoice(chordsEngine.currentChord[i]->toInt(), i);
+        soundEngine.polysynth.setPitchForVoice(chordsEngine.currentChord[i].getMIDINoteNumber(), i);
     }
 }
 
