@@ -11,7 +11,9 @@
 #include <stdio.h>
 #include "Note.hpp"
 #include "Scale.hpp"
+#include <string>
 
+using namespace std;
 
 class ChordsEngine {
   
