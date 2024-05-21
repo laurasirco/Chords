@@ -3,4 +3,3 @@ ofxGui
 ofxMidi
 ofxOsc
 ofxPDSP
-ofxPoco
